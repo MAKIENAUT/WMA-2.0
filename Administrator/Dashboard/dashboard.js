@@ -15,8 +15,3 @@ function nav_link(position) {
    } 
 }
 
-function active_page() {
-   if (document.getElementById) {
-      
-   }
-}

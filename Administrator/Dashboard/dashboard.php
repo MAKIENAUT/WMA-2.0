@@ -96,8 +96,20 @@ $total_pages = ceil($total_records / $limit);
                </h3>
             </div>
             <div class="profile_settings">
-               <i class="fa-solid fa-gear"></i>
+               <div class="dropdown">
+                  <i class="fa-solid fa-gear"></i>
+                  <div class="dropdown-content">
+                     <a href="../Commands/logout.php" 
+                        onclick="return confirm('Are you sure you want to logout?');"
+                     >
+                        Logout
+                     </a>
+                     <a href="../AdminProfile/profile.php">Profile</a>
+                     <a href="#">Signup</a>
+                  </div>
+               </div>
             </div>
+
          </div>
       </header>
 
@@ -113,7 +125,7 @@ $total_pages = ceil($total_records / $limit);
             </div>
             <div class="charts" id="charts">
                <i class="fa-solid fa-chart-pie"></i>
-               <a href="">Charts</a>
+               <a href="../../Administrator/Charts/charts.php">Charts</a>
             </div>
             <div class="file_manager" id="file_manager">
                <i class="fa-solid fa-folder"></i>
