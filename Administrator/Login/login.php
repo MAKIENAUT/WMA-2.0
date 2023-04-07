@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
-	header("location: ../Dashboard/dashboard.php");
+	header("location: ../AdminDisplays/Dashboard/dashboard.php");
 	exit;
 }
 require_once "../Database/config.php";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$_SESSION["clearance"] = $clearance;
 
 							// Redirect user to dashboard
-							header("location: ../Dashboard/dashboard.php");
+							header("location: ../AdminDisplays/Dashboard/dashboard.php");
 							exit();
 						} else {
 							// Display an error message if password is not valid

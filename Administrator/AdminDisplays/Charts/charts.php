@@ -2,11 +2,11 @@
 session_start();
 
 // Include database configuration
-require_once __DIR__ . '/../../Administrator/Database/config.php';
+require_once __DIR__ . '../../../Database/config.php';
 
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['logged_in'])) {
-   header('Location: ../Login/login.php');
+   header('Location: ../../../Login');
    exit;
 }
 
@@ -48,6 +48,7 @@ $jsonDataStatus = json_encode($dataStatus);
 <head>
    <meta charset="utf-8">
    <title>Admin Panel</title>
+   <script src="charts.js"></script>
    <script src="https://www.gstatic.com/charts/loader.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -57,17 +58,17 @@ $jsonDataStatus = json_encode($dataStatus);
 </head>
 
 <body onload="nav_link(2)">
-<nav>
+   <nav>
       <header>
          <div class="header_image">
-            <a href="../../Pages/Home/home.html">
-               <img src="../../Photos/wma-logo.png">
+            <a href="../../../Pages/Home/home.html">
+               <img src="../../../Photos/wma-logo.png">
             </a>
          </div>
 
          <div class="profile_dock">
             <div class="profile_picture">
-               <img src="../../Photos/profile_placeholder.jpg">
+               <img src="../../../Photos/profile_placeholder.jpg">
             </div>
             <div class="profile_details">
                <h1>
@@ -81,7 +82,8 @@ $jsonDataStatus = json_encode($dataStatus);
                <div class="dropdown">
                   <i class="fa-solid fa-gear"></i>
                   <div class="dropdown-content">
-                     <a href="../Commands/logout.php" onclick="return confirm('Are you sure you want to logout?');">
+                     <a href="../../AdminCommands/logout.php"
+                        onclick="return confirm('Are you sure you want to logout?');">
                         Logout
                      </a>
                      <a href="../AdminProfile/profile.php">Profile</a>
@@ -89,7 +91,6 @@ $jsonDataStatus = json_encode($dataStatus);
                   </div>
                </div>
             </div>
-
          </div>
       </header>
 
@@ -101,32 +102,30 @@ $jsonDataStatus = json_encode($dataStatus);
          <div class="nav_links">
             <div class="dashboard" id="dashboard">
                <i class="fa-solid fa-gauge"></i>
-               <a href="../../Administrator/Dashboard/dashboard.php">Dashboard</a>
+               <a href="../Dashboard/dashboard.php">Dashboard</a>
             </div>
             <div class="charts" id="charts">
                <i class="fa-solid fa-chart-pie"></i>
-               <a href="../../Administrator/Charts/charts.php">Charts</a>
+               <a href="../Charts/charts.php">Charts</a>
             </div>
             <div class="file_manager" id="file_manager">
                <i class="fa-solid fa-folder"></i>
-               <a href="">File Manager</a>
+               <a href="../FileManager/filemanager.php">File Manager</a>
             </div>
          </div>
       </div>
    </nav>
+   
    <main>
       <div class="main_title">
          <h1>GENERAL INFORMATION</h1>
       </div>
 
       <div class="applicant_dash">
-         <h2>APPLICANT PROFESSIONS</h2>
-         <div id="chart_div_profession" style="width: 900px; height: 500px;"></div>
-      </div>
+         <div class="profession_chart" id="chart_div_profession" style="width: 500px; height: 275px;">
+         </div>
 
-      <div class="applicant_dash">
-         <h2>APPLICANT STATUS</h2>
-         <div id="chart_div_status" style="width: 900px; height: 500px;"></div>
+         <div class="status_chart" id="chart_div_status" style="width: 500px; height: 275px;"></div>
       </div>
    </main>
 
@@ -140,15 +139,6 @@ $jsonDataStatus = json_encode($dataStatus);
          var data = google.visualization.arrayToDataTable(jsonData);
 
          var options = {
-            // set chart title and style
-            title: 'Applicant Professions',
-            titleTextStyle: {
-               color: '#5e5e5e',
-               fontSize: 22,
-               bold: true,
-               fontName: 'Arial'
-            },
-            backgroundColor: '#f7f7f7',
             chartArea: {
                width: '75%',
                height: '70%'
@@ -157,12 +147,22 @@ $jsonDataStatus = json_encode($dataStatus);
                position: 'right',
                alignment: 'center',
                textStyle: {
-                  color: '#5e5e5e',
                   fontSize: 14,
+                  color: 'white',
                   fontName: 'Arial'
-               }
-            }
-            // set chart options and styles
+               },
+            },
+            title: 'Applicant Professions',
+            titleTextStyle: {
+               bold: true,
+               fontSize: 22,
+               color: 'white',
+               fontName: 'Arial'
+            },
+            pieHole: 0.8,
+            pieSliceText: 'none',
+            border: '1px solid white',
+            backgroundColor: 'transparent',
          };
          var chart = new google.visualization.PieChart(document.getElementById('chart_div_profession'));
          chart.draw(data, options);
@@ -172,14 +172,6 @@ $jsonDataStatus = json_encode($dataStatus);
          var jsonData = <?php echo $jsonDataStatus; ?>;
          var data = google.visualization.arrayToDataTable(jsonData);
          var options = {
-            title: 'Applicant Status',
-            titleTextStyle: {
-               color: '#5e5e5e',
-               fontSize: 22,
-               bold: true,
-               fontName: 'Arial'
-            },
-            backgroundColor: '#f7f7f7',
             chartArea: {
                width: '75%',
                height: '70%'
@@ -188,20 +180,28 @@ $jsonDataStatus = json_encode($dataStatus);
                position: 'right',
                alignment: 'center',
                textStyle: {
-                  color: '#5e5e5e',
                   fontSize: 14,
+                  color: 'white',
                   fontName: 'Arial'
                }
-            }
+            },
+            title: 'Applicant Status',
+            titleTextStyle: {
+               bold: true,
+               fontSize: 22,
+               color: 'white',
+               fontName: 'Arial'
+            },
+            pieHole: 0.8,
+            pieSliceText: 'none',
+            border: '1px solid white',
+            backgroundColor: 'transparent',
          };
 
          var chart = new google.visualization.PieChart(document.getElementById('chart_div_status'));
          chart.draw(data, options);
       }
-  // draw chart function and options for Status chart
    </script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="nav_highlight.js"></script>
 </body>
 
 </html>
