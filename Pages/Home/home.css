@@ -172,21 +172,24 @@ body {
 }
 /* NAVIGATION BAR [ END ] */
    section {
-      width: 100%;
-      height: 600px;
+      width: auto;
+      height: max-content;
       margin-top: 60px;
       display: flex;
+      flex-flow: column wrap;
       align-items: center;
       justify-content: center;
+   }
+   .section-img {
       background-size: cover;
       /* background-position-x: 200px;
-   background-position-y: -270px; */
+      background-position-y: -270px; */
       background-repeat: no-repeat;
       background-image: url(../../Photos/HOMEPAGE.jpeg);
    }
       .section-container {
-         width: 100%;
-         height: inherit;
+         height: 400px;
+         padding: 50px 50px 65px;
          gap: 30px;
          display: flex;
          align-items: center;
@@ -217,13 +220,11 @@ body {
                }
       .title_container {
          width: inherit;
-         height: 250px;
          display: flex;
          justify-content: center;
+         text-align: center;
       }
          .text_title {
-            margin-top: 30px;
-            gap: 15px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -264,6 +265,63 @@ body {
                   /* color: rgb(255, 213, 4); */
                   transition: 0.125s;
                }
+   .narrative_section {
+      padding: 50px;
+      height: 250px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+   }
+      .narrative_section a {
+         padding: 10px;
+         margin-top: auto;
+         color: black;
+         border-radius: 8px;
+         border: 1px solid teal;
+         outline-offset: 3px;
+         outline: 1px solid #daa520;
+         background-color: goldenrod;
+         transition: 0.125s;
+         text-align: center;
+         font-size: 16px;
+         font-weight: 700;
+         text-decoration: none;
+         font-family: "Montserrat", sans-serif;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+         .narrative_section a:hover {
+            background-color: rgb(209, 157, 26);
+            /* border-bottom: 1px solid white; */
+            /* color: rgb(255, 213, 4); */
+            transition: 0.125s;
+         }
+      .studyAndExchange_narrative {
+         display: flex;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         padding: 10px;
+      }
+      .family_narrative {
+         display: flex;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         padding: 10px;
+      }
+      .tempEmployment_narrative {
+         display: flex;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         padding: 10px;
+      }
+   .about_section {
+      padding: 50px;
+      height: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 /* RESPONSIVE INTRO SECTION */
 @media only screen and (max-width: 600px) {
    section {
