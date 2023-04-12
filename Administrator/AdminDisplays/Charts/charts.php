@@ -115,7 +115,7 @@ $jsonDataStatus = json_encode($dataStatus);
          </div>
       </div>
    </nav>
-   
+
    <main>
       <div class="main_title">
          <h1>GENERAL INFORMATION</h1>
@@ -183,6 +183,10 @@ $jsonDataStatus = json_encode($dataStatus);
                   fontSize: 14,
                   color: 'white',
                   fontName: 'Arial'
+               },
+               itemStyle: {
+                  borderWidth: 1,
+                  borderColor: 'white'
                }
             },
             title: 'Applicant Status',
@@ -196,6 +200,7 @@ $jsonDataStatus = json_encode($dataStatus);
             pieSliceText: 'none',
             border: '1px solid white',
             backgroundColor: 'transparent',
+            colors: ['green', 'cyan', 'indigo', 'blueviolet', 'magenta', 'yellow', 'orange', 'red']
          };
 
          var chart = new google.visualization.PieChart(document.getElementById('chart_div_status'));
