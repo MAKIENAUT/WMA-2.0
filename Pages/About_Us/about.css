@@ -216,7 +216,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../photos/HOMEPAGE.jpeg);
+  background-image: url(../../photos/HOMEPAGE.jpeg);
 }
 
 .content_title h1 {
@@ -314,7 +314,7 @@ body {
   background: linear-gradient(to right,
       rgba(255, 255, 255, 0) 30%,
       rgb(255, 255, 255) 50%),
-    url(../photos/compass.jpg) no-repeat;
+    url(../../photos/compass.jpg) no-repeat;
   background-size: cover;
   background-position-y: -150px;
 
@@ -374,7 +374,7 @@ body {
   background: linear-gradient(to left,
       rgba(255, 255, 255, 0) 30%,
       rgb(255, 255, 255) 50%),
-    url(../photos/map.jpg) no-repeat;
+    url(../../photos/map.jpg) no-repeat;
   background-size: cover;
 
   display: flex;
@@ -444,7 +444,7 @@ body {
 
   background-size: cover;
   background-position-y: -100px;
-  background-image: url(/photos/silk.jpg);
+  background-image: url(../../photos/silk.jpg);
 
   display: flex;
   align-items: center;
@@ -491,14 +491,12 @@ body {
 }
 
 .content_section {
-  width: 90%;
+  width: 100%;
   padding: 20px 0;
 }
 
 .visa_categories {
   width: 100%;
-
-  gap: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -506,8 +504,8 @@ body {
 }
 
 .visa_categories_subtitle {
-  width: 75%;
-  font-size: 25px;
+  width: 80%;
+  font-size: 16px;
   font-weight: 400;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -519,8 +517,8 @@ body {
 }
 
 .content_header {
-  width: 100%;
-  padding: 15px 30px;
+  width: 90%;
+  margin: 15px 0;
   border-radius: 10px;
   border-right: 1px solid gold;
   border-bottom: 2px solid teal;
@@ -533,6 +531,7 @@ body {
 
 .content_head {
   width: 100%;
+  padding: 10px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1179,8 +1178,7 @@ body {
 
   .visa_categories {
     width: 100%;
-
-    gap: 15px;
+    gap: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1189,7 +1187,8 @@ body {
 
   .visa_categories_subtitle {
     width: 100%;
-    font-size: 25px;
+    margin: 0;
+    font-size: 18px;
     font-weight: 400;
     text-align: center;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -1612,7 +1611,7 @@ footer {
   border-top: 2px solid rgb(48, 93, 98);
   background-size: cover;
   background-position-y: -100px;
-  background-image: url(../photos/silk.jpg);
+  background-image: url(../../photos/silk.jpg);
 }
 
 .footer_container {
@@ -1879,7 +1878,7 @@ button {
     border-top: 2px solid rgb(48, 93, 98);
     background-size: cover;
     background-position-y: 0;
-    background-image: url(photos/silk.jpg);
+    background-image: url(../../photos/silk.jpg);
   }
 
   .footer_container {
