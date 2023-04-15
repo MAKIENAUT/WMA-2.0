@@ -10,6 +10,7 @@ if (!isset($_SESSION['logged_in'])) {
    exit;
 }
 
+$id = $_SESSION['id'];
 $username = $_SESSION['username'];
 $clearance = $_SESSION['clearance'];
 
@@ -104,7 +105,7 @@ $total_pages = ceil($total_records / $limit);
                      >
                         Logout
                      </a>
-                     <a href="../AdminProfile/profile.php">Profile</a>
+                     <a href="../ProfileOptions/profileoptions.php">Profile</a>
                      <a href="#">Signup</a>
                   </div>
                </div>
@@ -169,41 +170,64 @@ $total_pages = ceil($total_records / $limit);
                      ?>
                      <tr>
                         <td>
-                           <?php echo htmlspecialchars($row['firstname'], ENT_QUOTES); ?>
+                           <?php 
+                              echo htmlspecialchars($row['firstname'], ENT_QUOTES); 
+                           ?>
                         </td>
                         <td>
-                           <?php echo htmlspecialchars($row['lastname'], ENT_QUOTES); ?>
+                           <?php 
+                              echo htmlspecialchars($row['lastname'], ENT_QUOTES); 
+                           ?>
                         </td>
                         <td>
-                           <?php echo htmlspecialchars($row['address'], ENT_QUOTES) . ", "
-                              . htmlspecialchars($row['country'], ENT_QUOTES); ?>
+                           <?php 
+                              echo  htmlspecialchars($row['address'], ENT_QUOTES) . ", ". 
+                                    htmlspecialchars($row['country'], ENT_QUOTES); 
+                           ?>
                         </td>
                         <td>
-                           <?php echo htmlspecialchars($row['phone_number'], ENT_QUOTES); ?>
+                           <?php 
+                              echo htmlspecialchars($row['phone_number'], ENT_QUOTES); 
+                           ?>
                         </td>
                         <td>
-                           <?php echo htmlspecialchars($row['email'], ENT_QUOTES); ?>
+                           <?php 
+                              echo htmlspecialchars($row['email'], ENT_QUOTES); 
+                           ?>
                         </td>
                         <td>
-                           <?php echo htmlspecialchars($row['profession'], ENT_QUOTES); ?>
+                           <?php 
+                              echo htmlspecialchars($row['profession'], ENT_QUOTES); 
+                           ?>
                         </td>
-                        <td class="status" <?php
-                        if ($row['status'] == 'NEW') {
-                           echo 'style="background-color: #1fc22d;"';
-                        } elseif ($row['status'] == 'PENDING') {
-                           echo 'style="background-color: #4293f5;"';
-                        } elseif ($row['status'] == 'FINISHED') {
-                           echo 'style="background-color: red;"';
-                        } {
-
-                        }
-                        ?>>
-                           <a id="status" href="../../AdminCommands/update.php?id=<?php echo $row['id']; ?>">
+                        <td class="status" 
+                           <?php
+                              if ($row['status'] == 'PHASE_1') {
+                                 echo 'style="background-color: green;"';
+                              } elseif ($row['status'] == 'PHASE_1A') {
+                                 echo 'style="background-color: rgb(0, 255, 255, 0.7);"';
+                              } elseif ($row['status'] == 'PHASE_2') {
+                                 echo 'style="background-color: indigo;"';
+                              } elseif ($row['status'] == 'PHASE_3') {
+                                 echo 'style="background-color: blueviolet;"';
+                              } elseif ($row['status'] == 'PHASE_4') {
+                                 echo 'style="background-color: magenta;"';
+                              } elseif ($row['status'] == 'PHASE_5') {
+                                 echo 'style="background-color: gold;"';
+                              } elseif ($row['status'] == 'PHASE_6') {
+                                 echo 'style="background-color: orange;"';
+                              } elseif ($row['status'] == 'PHASE_7') {
+                                 echo 'style="background-color: red;"';
+                              }
+                           ?>
+                        >
+                           <a id="status" 
+                              href="../Phases/progress.php?id=<?php echo $row['id']; ?>">
                               <?php echo $row['status']; ?>
                            </a>
                         </td>
                         <td>
-                           <a href="../../AdminCommands/show_files.php?id=<?php echo $row['file']; ?>">
+                           <a href="../FileManager/filemanager.php?folder=<?php $foldername = str_replace("../ApplicantFiles/", "", $row['file']);  echo $foldername;?>">
                               <?php echo $row['file']; ?>
                            </a>
                         </td>
