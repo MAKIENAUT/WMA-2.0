@@ -210,8 +210,7 @@ section {
 .title_image {
   height: 400px;
   background-size: cover;
-  background-color: rgb(243, 243, 243);
-  background-position-x: 150px;
+  background-position-x: 0;
   background-position-y: -130px;
   background-repeat: no-repeat;
   background-image: url("../../Photos/famBased.jpg");
@@ -350,9 +349,10 @@ section {
 }
 
 .steps_conclusion {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 15px;
+   margin-top: 30px;
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 15px;
 }
 
 .steps_conclusion p {

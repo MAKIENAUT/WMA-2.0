@@ -210,11 +210,9 @@ section {
 .title_image {
   height: 400px;
   background-size: cover;
-  background-color: rgb(243, 243, 243);
-  background-position-x: 150px;
-  background-position-y: -130px;
+  background-position-y: -200px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased.jpg");
+  background-image: url("../../Photos/studEx.jpg");
  
 }
 
@@ -342,17 +340,17 @@ section {
 
 .steps_image {
   width: 40%;
-  background-size: 175%;
-  background-position-x: -275px;
-  background-position-y: -275px;
+  background-size: cover;
+  background-position-x: -100px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased2.jpg");
+  background-image: url("../../Photos/studEx2.jpg");
 }
 
 .steps_conclusion {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 15px;
+   margin-top: 30px;
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 15px;
 }
 
 .steps_conclusion p {

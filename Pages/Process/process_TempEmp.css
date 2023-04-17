@@ -211,12 +211,23 @@ section {
   height: 400px;
   background-size: cover;
   background-color: rgb(243, 243, 243);
-  background-position-x: 150px;
+  background-position-x: 0;
   background-position-y: -130px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased.jpg");
- 
+  background-image: url("../../Photos/h2a.jpg"); 
 }
+
+.title_image2 {
+   height: 400px;
+   background-size: cover;
+   background-color: rgb(243, 243, 243);
+   background-position-x: 0;
+   background-position-y: -130px;
+   background-repeat: no-repeat;
+   background-image: url("../../Photos/eb3.jpg");
+   display: flex;
+   justify-content: flex-end;
+ }
 
 .title_image h1 {
   margin: 0;
@@ -224,13 +235,27 @@ section {
   font-size: 45px;
   height: inherit;
   letter-spacing: 5px;
-  color: rgb(18, 64, 71);
+  color: rgb(201, 169, 43);
   font-family: Georgia, "Times New Roman", Times, serif;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
+
+.title_image2 h1 {
+   margin: 0;
+   padding: 0 45px;
+   font-size: 45px;
+   height: inherit;
+   letter-spacing: 5px;
+   color: rgb(18, 64, 71);
+   font-family: Georgia, "Times New Roman", Times, serif;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+ }
 
 .consultation_content {
   height: fit-content;
@@ -252,15 +277,26 @@ section {
 }
 
 .steps_title {
-  margin-bottom: 20px;
+   margin: 0;
+   padding: 0 50px;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   margin-bottom: 20px;
 }
 
 .steps_title h1 {
-  padding: 0 50px;
   margin: 0;
   color: rgb(201, 169, 43);
   font-size: 35px;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.steps_title p {
+   margin: 0;
+   color: rgb(154, 127, 20);
+   font-size: 16px;
+   font-family: "Montserrat", sans-serif;
 }
 
 .steps_container {
@@ -342,12 +378,21 @@ section {
 
 .steps_image {
   width: 40%;
-  background-size: 175%;
-  background-position-x: -275px;
-  background-position-y: -275px;
+  background-size: 150%;
+  background-position-x: -150px;
+  background-position-y: -150px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased2.jpg");
+  background-image: url("../../Photos/h2a2.jpg");
 }
+
+.steps_image2 {
+   width: 40%;
+   background-size: 150%;
+   background-position-x: -150px;
+   background-position-y: -150px;
+   background-repeat: no-repeat;
+   background-image: url("../../Photos/eb32.jpg");
+ }
 
 .steps_conclusion {
   display: flex;
