@@ -8,7 +8,7 @@ body {
    width: 100%;
    height: fit-content;
 }
-/* NAVIGATION BAR [ START ] */
+/* ! NAVBAR */
    .navbar {
       width: 100%;
       height: 60px;
@@ -358,26 +358,104 @@ body {
                justify-content: center;
             }
 
-            
+/* ! FOOTER ! */
    footer {
       clear: both;
       width: 100%;
-      height: 400px;
+      height: 450px;
       outline-offset: 3px;
       background-size: cover;
-      background-position-y: -100px;
+      background-position-y: -220px;
+      background-position-x: center;
       outline: 1px solid goldenrod;
-      border-top: 2px solid rgb(48, 93, 98);
-      background-image: url(../../Photos/silk.jpg);
+      border-top: 2px solid teal;
+      background-image: url(../../Photos/passport.jpg);
    }
       .foot_container {
          width: 100%;
          height: 100%;
          box-sizing: border-box;
-         border: 1px solid gold;
+         background-color: rgb(0, 0, 0, 0.6);
 
-         gap: 15px;
          display: flex;
          align-items: center;
+         flex-direction: column;
+         justify-content: center;
       }
+         .foot_top {
+            width: 98%;
+            height: 85%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+         }
+            .foot_disclaimer {
+               width: 30%;
+               height: 100%;
+               padding: 15px;
+               box-sizing: border-box;
+
+               display: flex;
+               align-items: center;
+               flex-direction: column;
+               justify-content: space-between;
+            }
+               .disclaimer_logo {
+                  width: 100%;
+               }
+                  .disclaimer_logo a {
+                     width: 100%;
+                     transition: all 0.25s;
+                  }
+                     .disclaimer_logo a img {
+                        width: 100%;
+                     }
+                     .disclaimer_logo a:hover {
+                        opacity: 0.75;
+                        transition: all 0.25s;
+                     }
+               .disclaimer_description {
+                  width: 100%;
+                  box-sizing: border-box;
+               }
+                  .disclaimer_description p {
+                     width: 100%;
+                     font-size: 13px;
+                     text-indent: 10%;
+                     color: rgb(255, 255, 255);
+                     font-family: "Montserrat", sans-serif;
+                  }
+               .miscellaneous_content {
+                  width: 100%;
+                  box-sizing: border-box;
+                  
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+               }
+                  .miscellaneous_content a {
+                     width: 50%;
+                  }
+                     .miscellaneous_content a img {
+                        width: 100%;
+                     }
+
+         .foot_bottom {
+            width: 98%;
+            height: 15%;
+            padding: 15px;
+            box-sizing: border-box;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+            .foot_bottom p {
+               width: 100%;
+               font-size: 15px;
+               font-weight: 500;
+               color: rgb(255, 255, 255);
+               font-family: "Montserrat", sans-serif;
+            }
       
