@@ -16,7 +16,6 @@
 
 <body>
 	<nav class="navbar" id="myNavBar">
-
 		<div class="logo_holder">
 			<a class="nav_logo" href="https://westmigrationagency.com/">
 				<img src="../../Photos/wma-logo.png" />
@@ -29,7 +28,7 @@
 			</div>
 	
 			<div class="nav_links dropdown">
-				<button class="dropbtn">Process</button>
+				<a class="dropbtn">Process</a>
 				<div class="dropdown-content">
 					<a href="../Process/process_FamBased.html">Family Based</a>
 					<a href="../Process/process_StudEx.html">Study and Exchange</a>
@@ -38,7 +37,7 @@
 			</div>
 	
 			<div class="nav_links dropdown">
-				<button class="dropbtn">Categories</button>
+				<a class="dropbtn">Categories</a>
 				<div class="dropdown-content">
 					<a href="../Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
 					<a href="../Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange</a>
@@ -47,8 +46,12 @@
 				</div>
 			</div>
 	
-			<div class="nav_links">
-				<a href="../About_Us/about.html">About Us</a>
+			<div class="nav_links dropdown">
+				<a class="dropbtn">About Us</a>
+				<div class="dropdown-content">
+					<a href="../About_Us/about.html">About Us</a>
+					<a href="../About_Us/statement.html">Specialization</a>
+				</div>
 			</div>
 		</div>
 	
@@ -172,98 +175,154 @@
 
 	<!-- ! ------------------------------------- -->
 
-	<!-- FOOTER BAR SECTION [START] -->
 	<footer>
-		<div class="footer_container">
-			<!-- LOGO SECTION [ START ] -->
-			<div class="logo_container">
-				<a href="https://westmigrationconsultancy.com/">
-					<img src="../../Photos/wma-logo.png" />
-				</a>
+		<div class="foot_container">
+			<div class="foot_top">
+				<div class="foot_disclaimer">
+					<div class="disclaimer_logo">
+						<a href="../../Pages/Home/home.html">
+							<img src="../../Photos/wma-logo.png"/>
+						</a>
+					</div>
+					<div class="disclaimer_description">
+						<p>
+							West Migration Agency LLC (“WMA”) is the parent company of West Migration Consultancy Inc.,(“WMC”) based in the Philippines. WMC and its state affiliates advance the corporation's interest to engage in immigration consultancy by providing expert advice to prospective clients for the USA through qualification assistance, processing of applications, and other related documents. 
+						</p>
+					</div>
+					<div class="miscellaneous_content">
+						<a href="https://westmigrationconsultancy.com/">
+							<img src="../../Photos/wmc-logo.png"/>
+						</a>
+						<a href="https://westmigrationconsultancy.com/">
+							<img src="../../Photos/USCIS.svg"/>
+						</a>
+					</div>
+				</div>
+
+				<div class="offices">
+					<div class="USA_Office">
+						<h2>USA Office</h2>
+						<div class="USA_office_address">
+							<h4>
+								<i id="icon1" class="fa-solid fa-location-dot"></i>
+								Address
+							</h4>
+							<p>3400 Cottage Way STE. G2 #11495 Sacramento, CA 95825</p>
+						</div>
+						<div class="USA_office_contacts">
+							<div class="USA_Email">
+								<h4>
+									<i class="fa-regular fa-envelope"></i>
+									Email
+								</h4>
+								<p>admin@westmigrationagency.us</p>
+							</div>
+							<div class="USA_Phone">
+								<h4>
+									<i class="fa-solid fa-phone"></i>
+									Phone
+								</h4>
+								<p>415-633-6865</p>
+							</div>
+						</div>
+					</div>
+					<div class="PH_Office">
+						<h2>Philippines Office</h2>
+						<div class="PH_office_cebu">
+							<h4>
+								<i id="icon1" class="fa-solid fa-location-dot"></i>
+								Address (Cebu Branch)
+							</h4>
+							<p>
+								11th Floor, AppleOne - Equicom Tower Mindanao Avenue,
+ 								cor. Biliran St., Cebu Business Park, Cebu City 6000 Philippines
+							</p>
+						</div>
+						<div class="PH_office_dagupan">
+							<h4>
+								<i id="icon1" class="fa-solid fa-location-dot"></i>
+								Address (Dagupan Branch)
+							</h4>
+							<p>Upcoming!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="foot_pages">
+					<div class="footer_about">
+						<h2>About Us</h2>
+						<div class="about_links">
+							<a href="../../Pages/About_Us/about.html">
+								About Us
+							</a>
+							<a href="../../Pages/About_Us/about.html">
+								Specializations
+							</a>
+						</div>
+					</div>
+					<div class="footer_process">
+						<h2>Process</h2>
+						<div class="process_links">
+							<a href="../../Pages/Process/process_FamBased.html">
+								Family Based
+							</a>
+							<a href="../../Pages/Process/process_StudEx.html">
+								Study and Echange
+							</a>
+							<a href="../../Pages/Process/process_TempEmp.html">
+								Temporary Employment
+							</a>
+						</div>
+					</div>
+					<div class="footer_news">
+						<h2>News</h2>
+						<div class="news_links">
+							<a href="../../Pages/News/news.html">
+								News Page
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="foot_contacts">
+					<div class="social_media">
+						<h2>Follow Us!</h2>
+						<div class="socmed_container">
+							<a class="socialButton1" href="https://www.facebook.com/profile.php?id=100087001537840">
+								<i class="fa-brands fa-facebook-f"></i>
+							</a>
+							<a href="#" class="socialButton2">
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+					<div class="contact_us">
+						<h2>Have some inquiries?</h2>
+						<div class="contact_link">
+							<a href="../../Pages/Contact_Us/contact.php">
+								<i class="fa-solid fa-phone" id="icon1"></i>
+								<i class="fa-solid fa-bell" id="icon2"></i>
+								Contact Us!
+							</a>
+						</div>
+					</div>
+					<div class="tech_team">
+						<h2>Any Technical Issues?</h2>
+						<div class="tech_link">
+							<a href="../../Pages/Contact_Us/contact.php">
+								<i class="fa-solid fa-envelope" id="icon1"></i>
+								<i class="fa-solid fa-envelope-open" id="icon2"></i>
+								Contact Us!
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="foot_bottom">
 				<p>© 2023 West Migration Agency All Rights Reserved</p>
-				<p>
-					West Migration Agency LLC (“WMA”) is the parent company of West
-					Migration Consultancy Inc.,(“WMC”) based in the Philippines. WMC and
-					its state affiliates advance the corporation's interest to engage in
-					immigration consultancy by providing expert advice to prospective
-					clients for the USA through qualification assistance, processing of
-					applications, and other related documents.
-				</p>
 			</div>
-			<!-- LOGO SECTION [ END ] -->
-
-			<!-- CONTACTS SECTION [ START ] -->
-			<div class="contact_info">
-				<div class="contact_info_left">
-					<i id="icon1" class="fa-solid fa-location-dot"></i>
-					<i id="icon2" class="fa-solid fa-envelope"></i>
-					<i id="icon3" class="fa-solid fa-phone"></i>
-					<i id="icon4" class="fa-solid fa-link"></i>
-				</div>
-				<div class="contact_info_right">
-					<p class="address">
-						3400 Cottage Way STE. G2 #11495 Sacramento, CA 95825
-					</p>
-					<p class="e-mail">admin@westmigrationagency.us</p>
-					<p class="phone">415-633-6865</p>
-					<a href="admin/login/login.php">ADMIN</a>
-				</div>
-			</div>
-			<!-- CONTACTS SECTION [ END ] -->
-
-			<!-- PAGE SECTION LINKS [ START ] -->
-			<div class="about_links">
-				<h3 class="about_title">About Us</h3>
-				<div class="about_links_container">
-					<a class="company_links" href="about/about.html"> Our Company </a>
-					<a class="company_links" href="about/about.html#mission_start">
-						Our Mission
-					</a>
-					<a class="company_links" href="about/about.html#specialization_start">
-						Our Specializations
-					</a>
-				</div>
-			</div>
-			<div class="about_links">
-				<h3 class="about_title">Processes</h3>
-				<div class="about_links_container">
-					<a class="company_links" href="process/process.html">
-						Consultation Process
-					</a>
-					<a class="company_links" href="process/process.html#timeline_start">
-						Timeline of Application
-					</a>
-					<a class="company_links" href="process/process.html#howto_start">
-						How-To Apply
-					</a>
-				</div>
-			</div>
-			<!-- PAGE SECTION LINKS [ START ] -->
-
-			<!-- SOCIAL MEDIA LINK SECTION [ START ] -->
-			<div class="socials">
-				<div class="socials-container">
-					<div>
-						<a href="https://www.facebook.com/profile.php?id=100087001537840" id="socialButton1">
-							<i class="fa-brands fa-facebook-f"></i>
-						</a>
-					</div>
-					<div>
-						<a href="#" id="socialButton2">
-							<i class="fa-brands fa-instagram"></i>
-						</a>
-					</div>
-					<div class="email_button">
-						<button id="socialButton3" onclick="copyToClipboard()">
-							<i class="fa-solid fa-envelope"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-			<!-- SOCIAL MEDIA LINK SECTION [ END ] -->
 		</div>
 	</footer>
-	<!-- FOOTER BAR SECTION [END] -->
 </body>
 
 </html>
