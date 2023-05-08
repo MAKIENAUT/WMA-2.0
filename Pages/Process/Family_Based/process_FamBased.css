@@ -7,7 +7,7 @@ body {
    width: 100%;
    height: fit-content;
 }
-/* NAVIGATION BAR [ START ] */
+
 /* ! NAVBAR ! */
 .navbar {
    width: 100%;
@@ -16,7 +16,7 @@ body {
    box-sizing: border-box;
    background-size: cover;
    outline: 1px solid gold;
-   background-image: url(../../Photos/silk.jpg);
+   background-image: url(../../../Photos/silk.jpg);
    top: 0;
    z-index: 10;
    position: fixed;
@@ -231,7 +231,7 @@ section {
   background-position-x: 0;
   background-position-y: -130px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased.jpg");
+  background-image: url("../../../Photos/famBased.jpg");
  
 }
 
@@ -263,7 +263,7 @@ section {
   width: 60%;
   padding: 40px 0 80px;
   background-color: rgb(255, 250, 236);
-  /* background-image: url(../../Photos/silk.jpg);
+  /* background-image: url(../../../Photos/silk.jpg);
   background-size: cover;
   background-blend-mode: multiply; */
 }
@@ -363,7 +363,7 @@ section {
   background-position-x: -275px;
   background-position-y: -275px;
   background-repeat: no-repeat;
-  background-image: url("../../Photos/famBased2.jpg");
+  background-image: url("../../../Photos/famBased2.jpg");
 }
 
 .steps_conclusion {
@@ -490,7 +490,7 @@ section {
      padding: 20px 0;
      height: auto;
      background-size: cover;
-     background-image: url("../../Photos/ladder.jpg");
+     background-image: url("../../../Photos/ladder.jpg");
      gap: 10px;
      display: flex;
      flex-direction: column;
@@ -632,7 +632,7 @@ section {
      height: 575px;
      background-size: cover;
      background-position: center;
-     background-image: url(../../Photos/takeoff.jpg);
+     background-image: url(../../../Photos/takeoff.jpg);
      display: flex;
      align-items: center;
      flex-flow: column nowrap;
@@ -876,7 +876,7 @@ footer {
    background-position-x: center;
    outline: 1px solid goldenrod;
    border-top: 2px solid teal;
-   background-image: url(../../Photos/passport.jpg);
+   background-image: url(../../../Photos/passport.jpg);
 }
    .foot_container {
       width: 100%;

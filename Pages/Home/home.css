@@ -7,6 +7,7 @@ body {
    width: 100%;
    height: fit-content;
 }
+
 /* ! NAVBAR ! */
 .navbar {
    width: 100%;
@@ -15,7 +16,7 @@ body {
    box-sizing: border-box;
    background-size: cover;
    outline: 1px solid gold;
-   background-image: url(../../Photos/silk.jpg);
+   background-image: url(../../../Photos/silk.jpg);
    top: 0;
    z-index: 10;
    position: fixed;
@@ -115,6 +116,7 @@ body {
    .icon {
       display: none;
    }
+
 
 @media screen and (max-width: 600px) {
    .navbar .link_holder:not(:first-child) {
@@ -423,8 +425,6 @@ body {
 /* ! -------------------------------- */
 
 
-
-/* ! FOOTER ! */
 footer {
    clear: both;
    width: 100%;
@@ -435,7 +435,7 @@ footer {
    background-position-x: center;
    outline: 1px solid goldenrod;
    border-top: 2px solid teal;
-   background-image: url(../../Photos/passport.jpg);
+   background-image: url(../../../Photos/passport.jpg);
 }
    .foot_container {
       width: 100%;
@@ -1071,4 +1071,3 @@ footer {
             color: rgb(255, 255, 255);
             font-family: "Montserrat", sans-serif;
          }
-   

@@ -4,7 +4,8 @@ body {
    width: 100%;
    height: fit-content;
 }
-/* NAVIGATION BAR [ START ] */
+
+/* ! NAVBAR ! */
 .navbar {
    width: 100%;
    height: 60px;
@@ -12,7 +13,7 @@ body {
    box-sizing: border-box;
    background-size: cover;
    outline: 1px solid gold;
-   background-image: url(../../Photos/silk.jpg);
+   background-image: url(../../../Photos/silk.jpg);
    top: 0;
    z-index: 10;
    position: fixed;
@@ -63,19 +64,6 @@ body {
          justify-content: center;
          position: relative;
       }
-         .nav_links button {
-            color: rgb(37, 37, 37);
-            font-size: 15px;
-            font-weight: 300;
-            background-color: transparent;
-            font-family: "Montserrat", sans-serif;
-         }
-            .nav_links button:hover {
-               font-weight: 400;
-               color: goldenrod;
-               transition: all 0.2s;
-               border-bottom: 2px solid teal;
-            }
          .nav_links a {
             width: 100%;
             height: 100%;
@@ -87,6 +75,7 @@ body {
             text-decoration: none;
             color: rgb(37, 37, 37);
             font-family: "Montserrat", sans-serif;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -122,10 +111,11 @@ body {
             justify-content: center;
          }
    .icon {
-   display: none;
+      display: none;
    }
-/* NAVBAR DESKTOP DESIGN [ END ] */
-/* NAVBAR RESPONSIVE DESIGN [ START ]*/
+
+
+
 @media only screen and (max-width: 600px) {
    .navbar {
       width: 100%;
@@ -212,7 +202,6 @@ body {
 /* CONTENT -START- */
 .container {
    height: max-content;
-   margin: 60px 0 30px;
    gap: 80px;
    display: flex;
    flex-flow: column nowrap;
@@ -1020,7 +1009,7 @@ iframe {
 }
 /* ! -------------------------------- */
 
-/* ! FOOTER ! */
+
 footer {
    clear: both;
    width: 100%;
@@ -1031,7 +1020,7 @@ footer {
    background-position-x: center;
    outline: 1px solid goldenrod;
    border-top: 2px solid teal;
-   background-image: url(../../Photos/passport.jpg);
+   background-image: url(../../../Photos/passport.jpg);
 }
    .foot_container {
       width: 100%;
@@ -1667,4 +1656,3 @@ footer {
             color: rgb(255, 255, 255);
             font-family: "Montserrat", sans-serif;
          }
-   

@@ -53,49 +53,46 @@ $conn->close();
 </head>
 
 <body>
-   <nav class="navbar" id="myNavBar">
-
-      <div class="logo_holder">
-         <a class="nav_logo" href="https://westmigrationagency.com/">
-            <img src="../../Photos/wma-logo.png" />
-         </a>
-      </div>
-
-      <div class="link_holder" id="link_holder">
-         <div class="nav_links">
-            <a href="#">News</a>
-         </div>
-
-         <div class="nav_links dropdown">
-            <button class="dropbtn">Process</button>
-            <div class="dropdown-content">
-               <a href="../Process/process_FamBased.html">Family Based</a>
-               <a href="../Process/process_StudEx.html">Study and Exchange</a>
-               <a href="../Process/process_TempEmp.html">Temporary Employment</a>
-            </div>
-         </div>
-
-         <div class="nav_links dropdown">
-            <button class="dropbtn">Categories</button>
-            <div class="dropdown-content">
-               <a href="../Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
-               <a href="../Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange</a>
-               <a href="../Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment</a>
-               <a href="../Forms/Categories/">Other Uploads</a>
-            </div>
-         </div>
-
-         <div class="nav_links">
-            <a href="../About_Us/about.html">About Us</a>
-         </div>
-      </div>
-
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-         <i class="fa fa-bars"></i>
-      </a>
-   </nav>
-
-   <!-- ------------------------------------ -->
+	<nav class="navbar" id="myNavBar">
+		<div class="logo_holder">
+			<a class="nav_logo" href="../../../index.php">
+				<img src="../../../Photos/wma-logo.png" />
+			</a>
+		</div>
+	
+		<div class="link_holder" id="link_holder">
+			<div class="nav_links">
+				<a href="#">News</a>
+			</div>
+	
+			<div class="nav_links dropdown">
+				<a class="dropbtn">Process</a>
+				<div class="dropdown-content">
+					<a href="../../../Pages/Process/Family_Based/process_FamBased.html">Family Based</a>
+					<a href="../../../Pages/Process/Study_Exchange/process_StudEx.html">Study and Exchange</a>
+					<a href="../../../Pages/Process/Temporary_Employment/process_TempEmp.html">Temporary Employment</a>
+				</div>
+			</div>
+	
+			<div class="nav_links dropdown">
+				<a class="dropbtn">Categories</a>
+				<div class="dropdown-content">
+					<a href="../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
+					<a href="../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
+					<a href="../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment (EB3/H2A)</a>
+					<a href="../../../Pages/Forms/Categories/">Other Uploads</a>
+				</div>
+			</div>
+	
+			<div class="nav_links">
+				<a href="../../../Pages/About_Us/about.html">About Us</a>
+			</div>
+		</div>
+	
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
 
    <!-- CONTENT -->
    <div class="container">
@@ -148,8 +145,8 @@ $conn->close();
 			<div class="foot_top">
 				<div class="foot_disclaimer">
 					<div class="disclaimer_logo">
-						<a href="../../Pages/Home/home.html">
-							<img src="../../Photos/wma-logo.png"/>
+						<a href="../../../Pages/Home/home.html">
+							<img src="../../../Photos/wma-logo.png"/>
 						</a>
 					</div>
 					<div class="disclaimer_description">
@@ -159,10 +156,10 @@ $conn->close();
 					</div>
 					<div class="miscellaneous_content">
 						<a href="https://westmigrationconsultancy.com/">
-							<img src="../../Photos/wmc-logo.png"/>
+							<img src="../../../Photos/wmc-logo.png"/>
 						</a>
 						<a href="https://westmigrationconsultancy.com/">
-							<img src="../../Photos/USCIS.svg"/>
+							<img src="../../../Photos/USCIS.svg"/>
 						</a>
 					</div>
 				</div>
@@ -220,10 +217,10 @@ $conn->close();
 					<div class="footer_about">
 						<h2>About Us</h2>
 						<div class="about_links">
-							<a href="../../Pages/About_Us/about.html">
+							<a href="../../../Pages/About_Us/about.html">
 								About Us
 							</a>
-							<a href="../../Pages/About_Us/about.html">
+							<a href="../../../Pages/About_Us/about.html">
 								Specializations
 							</a>
 						</div>
@@ -231,13 +228,13 @@ $conn->close();
 					<div class="footer_process">
 						<h2>Process</h2>
 						<div class="process_links">
-							<a href="../../Pages/Process/process_FamBased.html">
+							<a href="../../../Pages/Process/Family_Based/process_FamBased.html">
 								Family Based
 							</a>
-							<a href="../../Pages/Process/process_StudEx.html">
+							<a href="../../../Pages/Process/Study_Exchange/process_StudEx.html">
 								Study and Echange
 							</a>
-							<a href="../../Pages/Process/process_TempEmp.html">
+							<a href="../../../Pages/Process/Temporary_Employment/process_TempEmp.html">
 								Temporary Employment
 							</a>
 						</div>
@@ -245,7 +242,7 @@ $conn->close();
 					<div class="footer_news">
 						<h2>News</h2>
 						<div class="news_links">
-							<a href="../../Pages/News/news.html">
+							<a href="../../../Pages/News/news.html">
 								News Page
 							</a>
 						</div>
@@ -267,7 +264,7 @@ $conn->close();
 					<div class="contact_us">
 						<h2>Have some inquiries?</h2>
 						<div class="contact_link">
-							<a href="../../Pages/Contact_Us/contact.php">
+							<a href="../../../Pages/Contact_Us/contact.php">
 								<i class="fa-solid fa-phone" id="icon1"></i>
 								<i class="fa-solid fa-bell" id="icon2"></i>
 								Contact Us!
@@ -277,7 +274,7 @@ $conn->close();
 					<div class="tech_team">
 						<h2>Any Technical Issues?</h2>
 						<div class="tech_link">
-							<a href="../../Pages/Contact_Us/contact.php">
+							<a href="../../../Pages/Contact_Us/contact.php">
 								<i class="fa-solid fa-envelope" id="icon1"></i>
 								<i class="fa-solid fa-envelope-open" id="icon2"></i>
 								Contact Us!
