@@ -80,7 +80,7 @@ $conn->close();
 					<a href="../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
 					<a href="../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
 					<a href="../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment (EB3/H2A)</a>
-					<a href="../../../Pages/Forms/Categories/">Other Uploads</a>
+					<a href="#">Other Uploads</a>
 				</div>
 			</div>
 	

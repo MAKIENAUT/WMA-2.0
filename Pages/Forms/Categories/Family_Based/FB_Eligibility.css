@@ -1,22 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 * {
   padding: 0;
   margin: 0;
 }
+
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: url(../../../../Photos/background.jpg);
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-image: url(../../../../Photos/background.jpg);
 }
 
-
-
 /* ! NAVBAR ! */
+
 .navbar {
    width: 100%;
    height: 60px;
@@ -125,8 +127,6 @@ body {
       display: none;
    }
 
-
-
 @media only screen and (max-width: 600px) {
   .navbar {
     width: 100%;
@@ -207,385 +207,46 @@ body {
     display: flex;
   }
 }
-/* NAVBAR RESPONSIVE DESIGN [ END ]*/
-/* NAVIGATION BAR [END] */
-/* -------------------------------- */
-section {
-  top: 70px;
-  width: 100%;
-  margin-bottom: 70px;
-  position: relative;
+
+/* ! MAIN CONTENT ! */
+
+main {
+   width: 100%;
+   height: 100vh;
+   background-color: rgb(0, 0, 0, 0.4);
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
 }
-  .container {
-    width: 100%;
-    margin: 15px 0;
-    padding: 15px 0 50px 0;
-    gap: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-  }
-    form {
-      width: 100%;
-      height: inherit;
-      gap: 30px;
+   .main_container {
+      width: 70%;
+      height: 70%;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-color: rgb(0, 0, 0, 0.4);
+      background-image: url(../../../../Photos/coffee.jpg);
+
+      gap: 200px;
       display: flex;
       align-items: center;
-      justify-content: start;
       flex-direction: column;
-    }
-      label {
-        border-bottom: 1px solid gray;
+      justify-content: space-evenly;
+   }
+      .main_container h1 {
+         padding: 10px;
+         color: white;
+         text-align: center;
+         border-radius: 10px;
+         background-color: rgb(0, 0, 0, 0.4);
+         font-family: "Montserrat", sans-serif;
       }
-input,
-select {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  height: 40px;
-  padding-left: 10px;
-  color: black;
-  border: 0 solid red;
-  border-radius: 10px;
-  background-color: rgb(214, 214, 214);
-}
-.valid-input {
-  border: none;
-  width: 100%;
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-  font-size: 16px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-input[type="file"] {
-  width: 100%;
-  display: none;
-}
-input[type="radio"] {
-  width: 20px;
-}
-.personal_tab,
-.contact_tab {
-  width: 50%;
-  height: fit-content;
-  background-color: white;
-  border-radius: 15px;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 15px;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Montserrat', sans-serif;
-}
-#personal-info,
-#contact-info {
-  padding: 3px;
-  grid-column: span 2;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-}
-#name-title,
-#address-title,
-#contact-title {
-  padding: 3px;
-  grid-column: span 2;
-  font-size: 16px;
-  width: 50%;
-  margin-top: 20px;
-}
-#address {
-  grid-column: span 2;
-  
-}
-#country,
-#email {
-  grid-column: span 1;
-}
-.interest_tab {
-  width: 50%;
-  height: fit-content;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Montserrat', sans-serif;
-  gap: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-.profession {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-#div1 {
-  display: none;
-}
-.eligibility {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#eligibility-title {
-  padding: 3px;
-  width: 100%;
-  margin-top: 20px;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-}
-.yes,
-.no {
-  width: 80%;
-  height: fit-content;
-  display: flex;
-}
-.yes input,
-.no input {
-  width: 20px;
-  margin: 0 15px 0 15px;
-}
-.yes label,
-.no label {
-  width: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-}
-.reference {
-  width: 100%;
-}
-.reference_content {
-  width: 100%;
-}
-
-.upload_tab {
-  width: 50%;
-  height: fit-content;
-  background-color: white;
-  border-radius: 15px;
-  display: flex;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Montserrat', sans-serif;
-}
-.upload {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-}
-#upload-info {
-  padding: 3px;
-  grid-column: span 2;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-}
-#valid-title1 {
-  grid-column: span 2;
-}
-.privacy_tab {
-  width: 50%;
-  height: fit-content;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Montserrat', sans-serif;
-  gap: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-.terms {
-  width: 100%;
-  margin-top: 15px;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-}
-.terms input {
-  width: 20px;
-  margin: 0 15px 0 15px;
-}
-.terms label {
-  height: 100%;
-  border: none;
-}
-.scheduling {
-  width: 70%;
-  height: 1000px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.scheduling_title {
-  width: 75%;
-  height: 200px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  gap: 30px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.scheduling_title h1 {
-  margin: 0;
-  padding: 0;
-  width: 60%;
-  padding: 10px;
-  font-size: 25px;
-  box-sizing: border-box;
-  border-bottom: 1px solid gray;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.scheduling_title p {
-  margin: 0;
-  padding: 0;
-  width: 70%;
-  font-size: 16px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-.calendly-inline-widget {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-.submit button {
-  cursor: pointer;
-  padding: 10px;
-  margin-top: 10px;
-  color: black;
-  border-radius: 8px;
-  background-color: rgb(168, 124, 14);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 0;
-  }
-  label {
-    border-bottom: 1px solid gray;
-  }
-  input,
-  select {
-    width: 100%;
-    height: 30px;
-    padding-left: 0;
-    font-size: 12px;
-    text-indent: 7px;
-    border-radius: 5px;
-  }
-  #other_option {
-    width: 65%;
-  }
-  input[type="file"] {
-    width: 100%;
-    display: none;
-  }
-  input[type="radio"] {
-    width: 17px;
-  }
-  .personal_tab,
-  .contact_tab,
-  .interest_tab,
-  .upload_tab,
-  .privacy_tab {
-    gap: 10px;
-    width: 85%;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  #personal-info,
-  #contact-info,
-  #upload-info {
-    width: 100%;
-    font-size: 17px;
-  }
-  #name-title,
-  #address-title,
-  #contact-title,
-  #valid-title1 {
-    margin-top: 0;
-    font-size: 14px;
-  }
-  #div1 {
-    margin-left: 10px;
-    font-size: 12px;
-    display: none;
-  }
-  .eligibility {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  #eligibility-title {
-    margin-top: 0;
-    font-size: 14px;
-  }
-  .yes,
-  .no {
-    width: 100%;
-  }
-  #valid-title {
-    width: 100%;
-    font-size: 14px;
-  }
-  #resume_label,
-  #passport_label {
-    font-size: 14px;
-  }
-  #credential_label,
-  #reference_label {
-    font-size: 12px;
-  }
-  .privacy_tab p {
-    font-size: 13px;
-  }
-  .privacy_tab a {
-    font-size: 15px;
-  }
-  .terms {
-    margin-top: 0;
-  }
-  .terms input {
-    width: 15px;
-    margin: 0 10px 0 10px;
-  }
-  #validity_check {
-    font-size: 15px;
-  }
-}
 
 
 
-
-/* FOOTER BAR DESKTOP DESIGN [ START ] */
+/* ! FOOTER ! */
 footer {
    clear: both;
    width: 100%;
