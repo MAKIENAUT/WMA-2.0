@@ -30,24 +30,24 @@
 			<div class="nav_links dropdown">
 				<a class="dropbtn">Process</a>
 				<div class="dropdown-content">
-					<a href="../../../Pages/Process/Family_Based/process_FamBased.html">Family Based</a>
-					<a href="../../../Pages/Process/Study_Exchange/process_StudEx.html">Study and Exchange</a>
-					<a href="../../../Pages/Process/Temporary_Employment/process_TempEmp.html">Temporary Employment</a>
+					<a href="../../../../Pages/Process/Family_Based/process_FamBased.html">Family Based</a>
+					<a href="../../../../Pages/Process/Study_Exchange/process_StudEx.html">Study and Exchange</a>
+					<a href="../../../../Pages/Process/Temporary_Employment/process_TempEmp.html">Temporary Employment</a>
 				</div>
 			</div>
 	
 			<div class="nav_links dropdown">
 				<a class="dropbtn">Categories</a>
 				<div class="dropdown-content">
-					<a href="../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
-					<a href="../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
-					<a href="../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment (EB3/H2A)</a>
+					<a href="../../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
+					<a href="../../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
+					<a href="../../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment (EB3/H2A)</a>
 					<a href="#">Other Uploads</a>
 				</div>
 			</div>
 	
 			<div class="nav_links">
-				<a href="../../../Pages/About_Us/about.html">About Us</a>
+				<a href="../../../../Pages/About_Us/about.html">About Us</a>
 			</div>
 		</div>
 	
