@@ -229,6 +229,16 @@ section {
    justify-content: flex-end;
  }
 
+ .title_image3 {
+   height: 400px;
+   background-size: cover;
+   background-color: rgb(243, 243, 243);
+   background-position-x: 0;
+   background-position-y: -75px;
+   background-repeat: no-repeat;
+   background-image: url("../../Photos/h1b.jpg"); 
+ }
+
 .title_image h1 {
   margin: 0;
   padding: 0 45px;
@@ -250,6 +260,20 @@ section {
    height: inherit;
    letter-spacing: 5px;
    color: rgb(18, 64, 71);
+   font-family: Georgia, "Times New Roman", Times, serif;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+ }
+
+ .title_image3 h1 {
+   margin: 0;
+   padding: 0 45px;
+   font-size: 45px;
+   height: inherit;
+   letter-spacing: 5px;
+   color: rgb(201, 169, 43);
    font-family: Georgia, "Times New Roman", Times, serif;
    position: absolute;
    display: flex;
@@ -305,8 +329,6 @@ section {
   padding: 0 50px;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .steps_odd {
@@ -392,6 +414,15 @@ section {
    background-position-y: -150px;
    background-repeat: no-repeat;
    background-image: url("../../Photos/eb32.jpg");
+ }
+
+ .steps_image3 {
+   width: 40%;
+   background-size: 225%;
+   background-position-x: -450px;
+   background-position-y: -400px;
+   background-repeat: no-repeat;
+   background-image: url("../../Photos/h1b2.jpg");
  }
 
 .steps_conclusion {
