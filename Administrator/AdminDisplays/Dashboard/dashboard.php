@@ -40,7 +40,7 @@ $query .= " LIMIT $limit OFFSET $offset";
 
 $result = mysqli_query($conn, $query);
 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
+ 
 // Count total number of records
 $count_query = "SELECT COUNT(*) AS count FROM form";
 if (!empty($search)) {

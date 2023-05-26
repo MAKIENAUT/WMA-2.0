@@ -1,8 +1,8 @@
 <?php
 // Database configuration
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_USERNAME', 'u910363469_admin');
+define('DB_PASSWORD', 'Xyanehmakie17');
 define('DB_NAME', 'u910363469_wma');
 
 // Attempt to connect to MySQL database
