@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 * {
    padding: 0;
    margin: 0;
@@ -116,8 +116,6 @@ body {
    .icon {
       display: none;
    }
-
-
 @media screen and (max-width: 600px) {
    .logo_holder {
       left: 0;
@@ -173,7 +171,8 @@ body {
       display: flex;
    }
 }
-/* NAVIGATION BAR [ END ] */
+/* ! NAVIGATION BAR [ END ] ! */ 
+
    section {
       width: auto;
       height: max-content;
@@ -294,7 +293,7 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url(../../Photos/studEx.jpg)
-    }
+   }
 
    .family_narrative {
       display: flex;
@@ -335,6 +334,7 @@ body {
    .narrative_section p {
       font-family: "Montserrat", sans-serif;
       font-size: 15px;
+      font-weight: 500;
       margin-bottom: 20px;
    }
       .narrative_section a {
@@ -409,7 +409,7 @@ body {
    .image-container {
       width: 90%;
       height: max-content;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
    }
@@ -588,6 +588,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -606,6 +607,7 @@ footer {
                }
                   .USA_office_address h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -614,6 +616,7 @@ footer {
                      }
                   .USA_office_address p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -636,6 +639,7 @@ footer {
                   }
                      .USA_Email h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -644,6 +648,7 @@ footer {
                         }
                      .USA_Email p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -660,6 +665,7 @@ footer {
                   }
                      .USA_Phone h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -668,12 +674,13 @@ footer {
                         }
                      .USA_Phone p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
             .PH_Office {
                width: 100%;
-               height: 45%;
+               height: 55%;
                padding: 10px;
                box-sizing: border-box;
                
@@ -686,6 +693,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -704,6 +712,7 @@ footer {
                }
                   .PH_office_cebu h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -712,6 +721,7 @@ footer {
                      }
                   .PH_office_cebu p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -728,6 +738,7 @@ footer {
                }
                   .PH_office_dagupan h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -736,6 +747,7 @@ footer {
                      }
                   .PH_office_dagupan p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -931,6 +943,7 @@ footer {
                   width: 50%;
                   height: 100%;
                   color: white;
+                  font-size: 20px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -994,6 +1007,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 20px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1059,6 +1073,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 20px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 

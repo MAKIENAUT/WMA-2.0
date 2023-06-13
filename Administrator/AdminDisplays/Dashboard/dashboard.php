@@ -10,57 +10,38 @@ if (!isset($_SESSION['logged_in'])) {
    exit;
 }
 
-$id = $_SESSION['id'];
 $username = $_SESSION['username'];
 $clearance = $_SESSION['clearance'];
 
-// Define pagination variables
-$limit = 10;
-$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-$search = isset($_GET['search']) ? trim($_GET['search']) : '';
+// Fetch data from database for profession chart
+$sqlProfession = "SELECT profession, COUNT(*) as total FROM form GROUP BY profession";
+$resultProfession = mysqli_query($conn, $sqlProfession);
 
-// Calculate offset based on current page
-$offset = ($page - 1) * $limit;
+// Create an array to hold profession chart data
+$dataProfession = array();
+$dataProfession[] = ['Profession', 'Total'];
 
-// Retrieve data from database based on search query
-$query = "SELECT * FROM form";
-if (!empty($search)) {
-   $search = mysqli_real_escape_string($conn, $search);
-   $query .= " WHERE lastname LIKE '%$search%' OR 
-                     firstname LIKE '%$search%' OR 
-                     address LIKE '%$search%' OR 
-                     country LIKE '%$search%' OR 
-                     phone_number LIKE '%$search%' OR 
-                     email LIKE '%$search%' OR 
-                     profession LIKE '%$search%' OR 
-                     status LIKE '%$search%'";
+while ($rowProfession = mysqli_fetch_assoc($resultProfession)) {
+   $dataProfession[] = [$rowProfession['profession'], (int) $rowProfession['total']];
 }
-$query .= " ORDER BY id";
-$query .= " LIMIT $limit OFFSET $offset";
 
-$result = mysqli_query($conn, $query);
-$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
- 
-// Count total number of records
-$count_query = "SELECT COUNT(*) AS count FROM form";
-if (!empty($search)) {
-   $search = mysqli_real_escape_string($conn, $search);
-   $count_query .= " WHERE lastname LIKE '%$search%' OR 
-                           firstname LIKE '%$search%' OR 
-                           address LIKE '%$search%' OR 
-                           country LIKE '%$search%' OR 
-                           phone_number LIKE '%$search%' OR 
-                           email LIKE '%$search%' OR 
-                           profession LIKE '%$search%' OR 
-                           status LIKE '%$search%'";
+// Fetch data from database for status chart
+$sqlStatus = "SELECT status, COUNT(*) as total FROM form GROUP BY status";
+$resultStatus = mysqli_query($conn, $sqlStatus);
+
+// Create an array to hold status chart data
+$dataStatus = array();
+$dataStatus[] = ['Status', 'Total'];
+
+while ($rowStatus = mysqli_fetch_assoc($resultStatus)) {
+   $dataStatus[] = [$rowStatus['status'], (int) $rowStatus['total']];
 }
-$count_result = mysqli_query($conn, $count_query);
-$count_data = mysqli_fetch_assoc($count_result);
-$total_records = $count_data['count'];
 
-// Calculate total pages
-$total_pages = ceil($total_records / $limit);
+// Convert data arrays into JSON format
+$jsonDataProfession = json_encode($dataProfession);
+$jsonDataStatus = json_encode($dataStatus);
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -68,6 +49,7 @@ $total_pages = ceil($total_records / $limit);
    <meta charset="utf-8">
    <title>Admin Panel</title>
    <script src="dashboard.js"></script>
+   <script src="https://www.gstatic.com/charts/loader.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -100,17 +82,15 @@ $total_pages = ceil($total_records / $limit);
                <div class="dropdown">
                   <i class="fa-solid fa-gear"></i>
                   <div class="dropdown-content">
-                     <a href="../../AdminCommands/logout.php" 
-                        onclick="return confirm('Are you sure you want to logout?');"
-                     >
+                     <a href="../../AdminCommands/logout.php"
+                        onclick="return confirm('Are you sure you want to logout?');">
                         Logout
                      </a>
-                     <a href="../ProfileOptions/profileoptions.php">Profile</a>
+                     <a href="../AdminProfile/profile.php">Profile</a>
                      <a href="#">Signup</a>
                   </div>
                </div>
             </div>
-
          </div>
       </header>
 
@@ -138,160 +118,95 @@ $total_pages = ceil($total_records / $limit);
 
    <main>
       <div class="main_title">
-         <h1>DASHBOARD</h1>
-         <form method="get" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <input type="text" name="search" placeholder="Search..." onchange="this.form.submit();"
-               value="<?php echo htmlspecialchars($search, ENT_QUOTES); ?>" />
-            <button type="submit">SEARCH</button>
-         </form>
-
+         <h1>GENERAL INFORMATION</h1>
       </div>
 
-      <div class="tabular_view">
-         <table>
-            <thead>
-               <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Address</th>
-                  <th>Phone Number</th>
-                  <th>Email Address</th>
-                  <th>Profession</th>
-                  <th>Status</th>
-                  <th>File Directory</th>
-                  <th>Actions </th>
-               </tr>
-            </thead>
+      <div class="applicant_dash">
+         <div class="profession_chart" id="chart_div_profession" style="width: 500px; height: 275px;">
+         </div>
 
-            <tbody>
-               <?php
-               if (!empty($rows)) {
-                  foreach ($rows as $row) {
-                     ?>
-                     <tr>
-                        <td>
-                           <?php 
-                              echo htmlspecialchars($row['firstname'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td>
-                           <?php 
-                              echo htmlspecialchars($row['lastname'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td>
-                           <?php 
-                              echo  htmlspecialchars($row['address'], ENT_QUOTES) . ", ". 
-                                    htmlspecialchars($row['country'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td>
-                           <?php 
-                              echo htmlspecialchars($row['phone_number'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td>
-                           <?php 
-                              echo htmlspecialchars($row['email'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td>
-                           <?php 
-                              echo htmlspecialchars($row['profession'], ENT_QUOTES); 
-                           ?>
-                        </td>
-                        <td class="status" 
-                           <?php
-                              if ($row['status'] == 'PHASE_1') {
-                                 echo 'style="background-color: green;"';
-                              } elseif ($row['status'] == 'PHASE_1A') {
-                                 echo 'style="background-color: rgb(0, 255, 255, 0.7);"';
-                              } elseif ($row['status'] == 'PHASE_2') {
-                                 echo 'style="background-color: indigo;"';
-                              } elseif ($row['status'] == 'PHASE_3') {
-                                 echo 'style="background-color: blueviolet;"';
-                              } elseif ($row['status'] == 'PHASE_4') {
-                                 echo 'style="background-color: magenta;"';
-                              } elseif ($row['status'] == 'PHASE_5') {
-                                 echo 'style="background-color: gold;"';
-                              } elseif ($row['status'] == 'PHASE_6') {
-                                 echo 'style="background-color: orange;"';
-                              } elseif ($row['status'] == 'PHASE_7') {
-                                 echo 'style="background-color: red;"';
-                              }
-                           ?>
-                        >
-                           <a id="status" 
-                              href="../Phases/progress.php?id=<?php echo $row['id']; ?>">
-                              <?php echo $row['status']; ?>
-                           </a>
-                        </td>
-                        <td>
-                           <a href="../FileManager/filemanager.php?folder=<?php $foldername = str_replace("../ApplicantFiles/", "", $row['file']);  echo $foldername;?>">
-                              <?php echo $row['file']; ?>
-                           </a>
-                        </td>
-                        <td>
-                           <a href="../../AdminCommands/delete.php?id=<?php echo $row['id'];
-                           echo $row['file']; ?>"
-                              onclick="return confirm('Are you sure you want to delete this item?');">
-                              Delete
-                           </a>
-                        </td>
-                     </tr>
-                     <?php
-                  }
-               } else {
-                  ?>
-                  <tr>
-                     <td colspan="9">No records found</td>
-                  </tr>
-                  <?php
-               }
-               ?>
-            </tbody>
-         </table>
+         <div class="status_chart" id="chart_div_status" style="width: 500px; height: 275px;"></div>
       </div>
-      <div class="pagination">
-         <?php
-         if ($total_pages > 1) {
-            echo '<div class="pagination-buttons">';
-            if ($page > 1) {
-               echo '<button class="prev" onclick="location.href = \'' . htmlspecialchars($_SERVER['PHP_SELF'] . '?page=' . ($page - 1) . '&search=' . $search, ENT_QUOTES) . '\'">Prev</button>';
-            } ?>
-
-            <div class="active_pages">
-               <?php
-               for ($i = 1; $i <= $total_pages; $i++) {
-                  echo '<button id="page-' . $i . '"';
-                  if ($page === $i) {
-                     echo ' class="active"';
-                     echo ' style="color:gold;"';
-                  }
-                  echo ' onclick="location.href = \'' . htmlspecialchars($_SERVER['PHP_SELF'] . '?page=' . $i . '&search=' . $search, ENT_QUOTES) . '\'">' . $i . '</button>';
-               }
-               ?>
-            </div>
-
-            <?php
-            if ($page < $total_pages) {
-               echo '<button class="next" onclick="location.href = \'' . htmlspecialchars($_SERVER['PHP_SELF'] . '?page=' . ($page + 1) . '&search=' . $search, ENT_QUOTES) . '\'">Next</button>';
-            }
-            echo '</div>';
-         }
-         ?>
-      </div>
-
    </main>
-</body>
-<script>
-   // get the button for the active page
-   const activeButton = document.querySelector('.active');
 
-   // add a gold color style to the active button
-   if (activeButton) {
-      activeButton.style.color = 'gold';
-   }
-</script>
+   <script>
+      google.charts.load('current', { 'packages': ['corechart'] });
+      google.charts.setOnLoadCallback(drawProfessionChart);
+      google.charts.setOnLoadCallback(drawStatusChart);
+
+      function drawProfessionChart() {
+         var jsonData = <?php echo $jsonDataProfession; ?>;
+         var data = google.visualization.arrayToDataTable(jsonData);
+
+         var options = {
+            chartArea: {
+               width: '75%',
+               height: '70%'
+            },
+            legend: {
+               position: 'right',
+               alignment: 'center',
+               textStyle: {
+                  fontSize: 14,
+                  color: 'white',
+                  fontName: 'Arial'
+               },
+            },
+            title: 'Applicant Professions',
+            titleTextStyle: {
+               bold: true,
+               fontSize: 22,
+               color: 'white',
+               fontName: 'Arial'
+            },
+            pieHole: 0.8,
+            pieSliceText: 'none',
+            border: '1px solid white',
+            backgroundColor: 'transparent',
+         };
+         var chart = new google.visualization.PieChart(document.getElementById('chart_div_profession'));
+         chart.draw(data, options);
+      }
+
+      function drawStatusChart() {
+         var jsonData = <?php echo $jsonDataStatus; ?>;
+         var data = google.visualization.arrayToDataTable(jsonData);
+         var options = {
+            chartArea: {
+               width: '75%',
+               height: '70%'
+            },
+            legend: {
+               position: 'right',
+               alignment: 'center',
+               textStyle: {
+                  fontSize: 14,
+                  color: 'white',
+                  fontName: 'Arial'
+               },
+               itemStyle: {
+                  borderWidth: 1,
+                  borderColor: 'white'
+               }
+            },
+            title: 'Applicant Status',
+            titleTextStyle: {
+               bold: true,
+               fontSize: 22,
+               color: 'white',
+               fontName: 'Arial'
+            },
+            pieHole: 0.8,
+            pieSliceText: 'none',
+            border: '1px solid white',
+            backgroundColor: 'transparent',
+            colors: ['green', 'cyan', 'indigo', 'blueviolet', 'magenta', 'yellow', 'orange', 'red']
+         };
+
+         var chart = new google.visualization.PieChart(document.getElementById('chart_div_status'));
+         chart.draw(data, options);
+      }
+   </script>
+</body>
 
 </html>

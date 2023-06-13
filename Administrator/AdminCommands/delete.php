@@ -26,5 +26,5 @@ function deleteAll($user_file)
          unlink($file);
    }
    rmdir($user_file);
-}
+}                                
 ?>

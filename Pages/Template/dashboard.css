@@ -132,7 +132,7 @@ body {
 								text-decoration: none;
 								transition: all 0.30s;
 								box-sizing: border-box;
-
+								
 							}
 								.dropdown-content a:hover {
 									color: goldenrod;
@@ -168,62 +168,42 @@ body {
 					letter-spacing: 1.5px;
 					box-sizing: border-box;
 					border-bottom: 2px solid goldenrod;
+					font-family: "Montserrat", sans-serif;
 
 					display: flex;
 					align-items: center;
 					justify-content: start;
 				}
 			.nav_links{
-				width: 100%;
 				gap: 5px;
+				width: 100%;
+				box-sizing: border-box;
+				
 				display: flex;
 				align-items: center;
 				flex-direction: column;
 				justify-content: center;
 			}
-				.dashboard, .charts, .file_manager {
-					width: 90%;
-					height: 45px;
-					padding: 10px;
-					color: white;
-					transition: all 0.25s;
+				.dashboard_links {
+					width: 100%;
+					padding: 0px 15px;
 					box-sizing: border-box;
-
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					height: fit-content;
 				}
-				.dashboard:hover, .charts:hover, .file_manager:hover {
-					color: teal;
-					transition: all 0.25s;
-					border-left: 3px solid gold;
-					background-color: rgba(255, 255, 255, 0.1);
-				}
-					.dashboard i, .charts i, .file_manager i {
-						width: 10%;
-						font-size: 18px;
-					}
-					.dashboard a, .charts a, .file_manager a {
-						width: 90%;
-						height: 100%;
+					.dashboard {
+						height: 45px;
 						color: white;
-						font-size: 18px;
-						font-weight: 600;
-						padding-left: 10px;
-						text-align: center;
-						transition: all 0.25s;
-						text-decoration: none;
-						letter-spacing: 1.5px;
-						box-sizing: border-box;
+						font-size: 20px;
+						padding: 0px 15px;
+						border-left: 3px solid goldenrod;
 						font-family: "Montserrat", sans-serif;
 
 						display: flex;
 						align-items: center;
 						justify-content: start;
 					}
-						.dashboard a:hover, .charts a:hover, .file_manager a:hover {
-							color: teal;
-							transition: all 0.25s;
+						.dashboard i {
+							width: 10%;
 						}
 	main {
 		width: 80%;

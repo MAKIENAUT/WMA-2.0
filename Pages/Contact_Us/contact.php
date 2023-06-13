@@ -35,21 +35,20 @@ $conn->close();
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="contact.css" />
-   <link rel="icon" type="image/x-icon" href="../photos/WMA.png">
-   <script src="contact.js"></script>
-   <title>TEMPLATE</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="contact.css" />
+	<link rel="icon" type="image/x-icon" href="../../../Photos/WMA.png" />
+	<script src="contact.js"></script>
+	<title>CONTACT US</title>
 </head>
 
 <body>
@@ -59,12 +58,12 @@ $conn->close();
 				<img src="../../../Photos/wma-logo.png" />
 			</a>
 		</div>
-	
+
 		<div class="link_holder" id="link_holder">
 			<div class="nav_links">
 				<a href="#">News</a>
 			</div>
-	
+
 			<div class="nav_links dropdown">
 				<a class="dropbtn">Process</a>
 				<div class="dropdown-content">
@@ -73,72 +72,45 @@ $conn->close();
 					<a href="../../../Pages/Process/Temporary_Employment/process_TempEmp.html">Temporary Employment</a>
 				</div>
 			</div>
-	
+
 			<div class="nav_links dropdown">
 				<a class="dropbtn">Categories</a>
 				<div class="dropdown-content">
 					<a href="../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
 					<a href="../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
-					<a href="../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment (EB3/H2A)</a>
+					<a href="../../../Pages/Forms/Categories/Temporary_Employment/TE_Eligibility.php">Temporary Employment
+						(EB3/H2A)</a>
 					<a href="#">Other Uploads</a>
 				</div>
 			</div>
-	
+
 			<div class="nav_links">
 				<a href="../../../Pages/About_Us/about.html">About Us</a>
 			</div>
 		</div>
-	
+
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 			<i class="fa fa-bars"></i>
 		</a>
 	</nav>
 
-   <!-- CONTENT -->
-   <div class="container">
-      <header>
-         <div class="content_title">
-            <h1>Connect with US!</h1>
-         </div>
-      </header>
-      <section>
-         <div class="content">
-            <div class="left">
-               <div>
-                  <p>Company Number: 415-633-6865</p>
-               </div>
-               <div>
-                  <p>Company Email: admin@westmigrationagency.us</p>
-               </div>
-               <div class="form">
-                  <h1>FOR INQUIRIES, PLEASE FILL UP FORM BELOW.</h1>
-                  <form method="post">
-                     <input required type="text" id="lastname" name="lastname" placeholder="Last Name:" />
-                     <input required type="text" id="firstname" name="firstname" placeholder="Last Name:" />
-                     <input required type="text" id="phone" name="phone" placeholder="Last Name:" />
-                     <input required type="email" id="email" name="email" placeholder="Last Name:" />
-                     <textarea id="message" name="message" placeholder="Message">
-                     </textarea>
-                     <input class="submit" type="submit" value="Submit" style="cursor: pointer;">
-                  </form>
-               </div>
-            </div>
-            <div class="right">
-               <div class="gmap_canvas">
-                  <iframe width="100%" height="90%" id="iframe"
-                     src="https://maps.google.com/maps?q=3400%20COTTAGE%20WAY%20STE,%20CA%2095825&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                  </iframe>
-                  <a href="https://fmovies-online.net"></a>
-                  <br />
-                  <a href="https://www.embedgooglemap.net"> </a>
-               </div>
-            </div>
-         </div>
-      </section>
-   </div>
-   <!-- CONTENT END -->
+	<main>
+		<div class="title_section">
+			<h1>
+				Connect with Us!
+			</h1>
+		</div>
 
+		<div class="main_section">
+			<div class="query_container">
+
+			</div>
+
+			<div class="maps_container">
+
+			</div>
+		</div>
+	</main>
 
 	<footer>
 		<div class="foot_container">
@@ -146,20 +118,26 @@ $conn->close();
 				<div class="foot_disclaimer">
 					<div class="disclaimer_logo">
 						<a href="../../../Pages/Home/home.html">
-							<img src="../../../Photos/wma-logo.png"/>
+							<img src="../../../Photos/wma-logo.png" />
 						</a>
 					</div>
 					<div class="disclaimer_description">
 						<p>
-							West Migration Agency LLC (“WMA”) is the parent company of West Migration Consultancy Inc.,(“WMC”) based in the Philippines. WMC and its state affiliates advance the corporation's interest to engage in immigration consultancy by providing expert advice to prospective clients for the USA through qualification assistance, processing of applications, and other related documents. 
+							West Migration Agency LLC (“WMA”) is the parent company of West
+							Migration Consultancy Inc.,(“WMC”) based in the Philippines. WMC
+							and its state affiliates advance the corporation's interest to
+							engage in immigration consultancy by providing expert advice to
+							prospective clients for the USA through qualification
+							assistance, processing of applications, and other related
+							documents.
 						</p>
 					</div>
 					<div class="miscellaneous_content">
 						<a href="https://westmigrationconsultancy.com/">
-							<img src="../../../Photos/wmc-logo.png"/>
+							<img src="../../../Photos/wmc-logo.png" />
 						</a>
 						<a href="https://westmigrationconsultancy.com/">
-							<img src="../../../Photos/USCIS.svg"/>
+							<img src="../../../Photos/USCIS.svg" />
 						</a>
 					</div>
 				</div>
@@ -199,8 +177,8 @@ $conn->close();
 								Address (Cebu Branch)
 							</h4>
 							<p>
-								11th Floor, AppleOne - Equicom Tower Mindanao Avenue,
- 								cor. Biliran St., Cebu Business Park, Cebu City 6000 Philippines
+								11th Floor, AppleOne - Equicom Tower Mindanao Avenue, cor.
+								Biliran St., Cebu Business Park, Cebu City 6000 Philippines
 							</p>
 						</div>
 						<div class="PH_office_dagupan">
@@ -217,9 +195,7 @@ $conn->close();
 					<div class="footer_about">
 						<h2>About Us</h2>
 						<div class="about_links">
-							<a href="../../../Pages/About_Us/about.html">
-								About Us
-							</a>
+							<a href="../../../Pages/About_Us/about.html"> About Us </a>
 							<a href="../../../Pages/About_Us/about.html">
 								Specializations
 							</a>
@@ -242,9 +218,7 @@ $conn->close();
 					<div class="footer_news">
 						<h2>News</h2>
 						<div class="news_links">
-							<a href="../../../Pages/News/news.html">
-								News Page
-							</a>
+							<a href="../../../Pages/News/news.html"> News Page </a>
 						</div>
 					</div>
 				</div>
