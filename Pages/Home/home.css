@@ -591,6 +591,7 @@ footer {
                height: 55%;
                padding: 10px;
                box-sizing: border-box;
+               border: 1px solid gold;
 
                display: flex;
                align-items: center;
@@ -696,6 +697,7 @@ footer {
                height: 55%;
                padding: 10px;
                box-sizing: border-box;
+               border: 1px solid gold;
                
                display: flex;
                align-items: center;
