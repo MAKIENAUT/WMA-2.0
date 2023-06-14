@@ -171,6 +171,7 @@ body {
       border: 1px solid red;
       display: flex;
    }
+
    .navbar.responsive .nav_links.dropdown {
       height: 200px;
       display: flex;
@@ -181,7 +182,7 @@ body {
       display: flex;
       flex-direction: column;
    }
-
+   
 }
 /* ! NAVIGATION BAR [ END ] ! */ 
 
