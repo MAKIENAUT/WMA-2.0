@@ -160,6 +160,10 @@ body {
       flex-direction: column;
       background-color: white;
       border-top: 1px solid gold;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
    }
    .navbar.responsive .nav_links {
       width: 80%;
@@ -167,9 +171,17 @@ body {
       border: 1px solid red;
       display: flex;
    }
+   .navbar.responsive .nav_links.dropdown {
+      height: 200px;
+      display: flex;
+      
+      flex-direction: column;
+   }
    .navbar.responsive .nav_links .dropdown-content {
       display: flex;
+      flex-direction: column;
    }
+
 }
 /* ! NAVIGATION BAR [ END ] ! */ 
 
