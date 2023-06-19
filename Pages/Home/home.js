@@ -19,5 +19,5 @@ function copyToClipboard() {
    navigator.clipboard.writeText(link);
 
    // Alert the copied text
-   alert("Admin Email copied to clipboard");
+   alert("Admin Email copied to clipboard"); 
 }
