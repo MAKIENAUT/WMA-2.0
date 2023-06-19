@@ -234,7 +234,7 @@ body {
             justify-content: center;
          }
          .navbar.responsive #navlink_categories .dropdown-content {
-            top: 50px;
+            top: 0px;
             width: 100%;
             height: 200px;
             position: relative;

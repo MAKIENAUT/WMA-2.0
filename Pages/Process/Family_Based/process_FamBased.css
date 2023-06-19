@@ -41,7 +41,7 @@ body {
          justify-content: center;
       }
          .nav_logo:hover {
-            opacity: 1;
+            opacity: 2;
             border-radius: 15px;
             transition: all 0.2s;
             background-color: transparent;
@@ -155,13 +155,15 @@ body {
       top: 60px;
       width: 75%;
       height: 560px;
+      display: flex;
       transition: all 1s;
+      flex-direction: column;
       background-color: white;
       border-top: 1px solid gold;
 
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: start;
    }
       .navbar.responsive #navlink_news {
          width: 100%;
@@ -177,7 +179,7 @@ body {
          display: flex;
          align-items: center;
          flex-direction: column;
-         justify-content: flex-start;
+         justify-content: start;
       }
       .navbar.responsive #navlink_categories {
          width: 100%;
@@ -187,7 +189,7 @@ body {
          display: flex;
          align-items: center;
          flex-direction: column;
-         justify-content: flex-start;
+         justify-content: start;
       }
       .navbar.responsive #navlink_about {
          width: 100%;
@@ -222,7 +224,7 @@ body {
             top: 50px;
             width: 100%;
             height: 150px;
-            position: relative;
+            position: none;
             background-color: #dedede;
             box-shadow: none;
 
@@ -232,7 +234,7 @@ body {
             justify-content: center;
          }
          .navbar.responsive #navlink_categories .dropdown-content {
-            top: 50px;
+            top: 0px;
             width: 100%;
             height: 200px;
             position: relative;
