@@ -740,6 +740,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -758,6 +759,7 @@ footer {
                }
                   .USA_office_address h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -766,6 +768,7 @@ footer {
                      }
                   .USA_office_address p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -788,6 +791,7 @@ footer {
                   }
                      .USA_Email h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -796,6 +800,7 @@ footer {
                         }
                      .USA_Email p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -812,6 +817,7 @@ footer {
                   }
                      .USA_Phone h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -820,12 +826,13 @@ footer {
                         }
                      .USA_Phone p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
             .PH_Office {
                width: 100%;
-               height: 45%;
+               height: 55%;
                padding: 10px;
                box-sizing: border-box;
                
@@ -838,6 +845,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -856,6 +864,7 @@ footer {
                }
                   .PH_office_cebu h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -864,6 +873,7 @@ footer {
                      }
                   .PH_office_cebu p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -880,6 +890,7 @@ footer {
                }
                   .PH_office_dagupan h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -888,6 +899,7 @@ footer {
                      }
                   .PH_office_dagupan p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -1083,6 +1095,7 @@ footer {
                   width: 50%;
                   height: 100%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1146,6 +1159,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1211,6 +1225,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1474,7 +1489,7 @@ footer {
                         }
                .PH_Office {
                   width: 100%;
-                  height: 45%;
+                  height: 55%;
                   padding: 10px;
                   box-sizing: border-box;
                   

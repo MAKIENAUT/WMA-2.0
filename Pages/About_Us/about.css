@@ -9,113 +9,248 @@ body {
    height: fit-content;
 }
 /* ! NAVBAR ! */
-   .navbar {
-      width: 100%;
-      height: 60px;
-      outline-offset: 3px;
-      box-sizing: border-box;
-      background-size: cover;
-      outline: 1px solid gold;
-      background-image: url(../../Photos/silk.jpg);
-      top: 0;
-      z-index: 10;
-      position: fixed;
+.navbar {
+   width: 100%;
+   height: 60px;
+   outline-offset: 3px;
+   box-sizing: border-box;
+   background-size: cover;
+   outline: 1px solid gold;
+   background-image: url(../../../Photos/silk.jpg);
+   top: 0;
+   z-index: 10;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+   .logo_holder {
+      width: 25%;
+      left: 30px;
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: space-between;
    }
-      .logo_holder {
-         width: 25%;
-         left: 30px;
-         position: absolute;
+      .nav_logo {
+         width: 100%;
+         opacity: 0.8;
+         transition: all 0.2s;
          display: flex;
          align-items: center;
-         justify-content: space-between;
+         justify-content: center;
       }
-         .nav_logo {
-            width: 100%;
-            opacity: 0.8;
+         .nav_logo:hover {
+            opacity: 2;
+            border-radius: 15px;
             transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: transparent;
          }
-            .nav_logo:hover {
-               opacity: 2;
-               border-radius: 15px;
-               transition: all 0.2s;
-               background-color: transparent;
-            }
-            .nav_logo img {
-               width: 90%;
-            }
-      .link_holder {
-         width: 45%;
-         height: inherit;
-         top: 0;
-         right: 20px;
-         position: absolute;
+         .nav_logo img {
+            width: 90%;
+         }
+   .link_holder {
+      width: 45%;
+      height: inherit;
+      top: 0;
+      right: 20px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+   }
+      .nav_links {
+         width: auto;
+         height: 70%;
          display: flex;
          align-items: center;
-         justify-content: space-evenly;
+         justify-content: center;
+         position: relative;
       }
-         .nav_links {
-            width: auto;
-            height: 70%;
+         .nav_links a {
+            width: 100%;
+            height: 100%;
+            padding: 0 10px;
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: rgb(37, 37, 37);
+            font-family: "Montserrat", sans-serif;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
          }
-            .nav_links a {
-               width: 100%;
-               height: 100%;
-               padding: 0 10px;
-               font-size: 15px;
-               font-weight: 300;
-               text-align: center;
+            .nav_links a:hover {
+               font-weight: 400;
+               color: goldenrod;
                transition: all 0.2s;
+               border-bottom: 2px solid teal;
+            }
+         .dropdown-content {
+            width: 250px;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+         }
+            .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
                text-decoration: none;
-               color: rgb(37, 37, 37);
-               font-family: "Montserrat", sans-serif;
+               display: block;
+            }
+               .dropdown-content a:hover {
+                  background-color: #f1f1f1;
+               }
+         .dropdown:hover .dropdown-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         }
+   .icon {
+      display: none;
+   }
+@media screen and (max-width: 600px) {
+   .logo_holder {
+      left: 0;
+      width: 60%;
+      height: 100%;
+   }
+   .link_holder {
+      display: none;
+   }
+   .icon {
+      right: 0;
+      width: 75px;
+      height: 100%;
+      color: teal;
+      font-size: 25px;
+      position: absolute;
+      text-decoration: none;
+      box-sizing: border-box;
 
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-               .nav_links a:hover {
-                  font-weight: 400;
-                  color: goldenrod;
-                  transition: all 0.2s;
-                  border-bottom: 2px solid teal;
-               }
-            .dropdown-content {
-               width: 250px;
-               display: none;
-               position: absolute;
-               background-color: #f9f9f9;
-               box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-               z-index: 1;
-               top: 100%;
-            }
-               .dropdown-content a {
-                  color: black;
-                  padding: 12px 16px;
-                  text-decoration: none;
-                  display: block;
-               }
-                  .dropdown-content a:hover {
-                     background-color: #f1f1f1;
-                  }
-            .dropdown:hover .dropdown-content {
-               display: flex;
-               align-items: center;
-               flex-direction: column;
-               justify-content: center;
-            }
-      .icon {
-         display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+      .icon i {
+         width: 100%;
+         height: 100%;
+         box-sizing: border-box;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
+}
+@media screen and (max-width: 600px) {
+   .navbar.responsive .link_holder {
+      right: 0;
+      top: 60px;
+      width: 75%;
+      height: 560px;
+      display: flex;
+      transition: all 1s;
+      flex-direction: column;
+      background-color: white;
+      border-top: 1px solid gold;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+   }
+      .navbar.responsive #navlink_news {
+         width: 100%;
+         height: 50px;
+         box-sizing: border-box;
+         border-bottom: 2px solid teal;
+      }
+      .navbar.responsive #navlink_process {
+         width: 100%;
+         height: 200px;
+         box-sizing: border-box;
+
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: start;
+      }
+      .navbar.responsive #navlink_categories {
+         width: 100%;
+         height: 250px;
+         box-sizing: border-box;
+
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: start;
+      }
+      .navbar.responsive #navlink_about {
+         width: 100%;
+         height: 50px;
+         box-sizing: border-box;
+         border-bottom: 2px solid teal;
+      }
+         .navbar.responsive #navlink_news a {
+            color: goldenrod;
+         }
+         .navbar.responsive #navlink_process a {
+            height: 50px;
+            color: goldenrod;
+            box-sizing: border-box;
+         }
+            .navbar.responsive #navlink_process .dropbtn {
+               border-bottom: 2px solid teal;
+            }
+         .navbar.responsive #navlink_categories a {
+            height: 50px;
+            color: goldenrod;
+            box-sizing: border-box;
+         }
+            .navbar.responsive #navlink_categories .dropbtn {
+               border-bottom: 2px solid teal;
+            }
+         .navbar.responsive #navlink_about a {
+            color: goldenrod;
+         }
+
+         .navbar.responsive #navlink_process .dropdown-content {
+            top: 50px;
+            width: 100%;
+            height: 150px;
+            position: none;
+            background-color: #dedede;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         }
+         .navbar.responsive #navlink_categories .dropdown-content {
+            top: 0px;
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background-color: #dedede;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         }
+            .navbar.responsive #navlink_process .dropdown-content a,
+            .navbar.responsive #navlink_categories .dropdown-content a{
+               color: black;
+            }
+}
 
    main {
       width: 100%;
@@ -838,6 +973,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -856,6 +992,7 @@ footer {
                }
                   .USA_office_address h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -864,6 +1001,7 @@ footer {
                      }
                   .USA_office_address p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -886,6 +1024,7 @@ footer {
                   }
                      .USA_Email h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -894,6 +1033,7 @@ footer {
                         }
                      .USA_Email p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -910,6 +1050,7 @@ footer {
                   }
                      .USA_Phone h4 {
                         width: 100%;
+                        font-size: 15px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
@@ -918,12 +1059,13 @@ footer {
                         }
                      .USA_Phone p {
                         width: 100%;
+                        font-size: 14px;
                         color: rgb(255, 255, 255, 0.7);
                         font-family: "Montserrat", sans-serif;
                      }
             .PH_Office {
                width: 100%;
-               height: 45%;
+               height: 55%;
                padding: 10px;
                box-sizing: border-box;
                
@@ -936,6 +1078,7 @@ footer {
                   width: 100%;
                   padding: 5px 0;
                   color: white;
+                  font-size: 20px;
                   text-align: center;
                   box-sizing: border-box;
                   border-bottom: 1px solid teal;
@@ -954,6 +1097,7 @@ footer {
                }
                   .PH_office_cebu h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -962,6 +1106,7 @@ footer {
                      }
                   .PH_office_cebu p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -978,6 +1123,7 @@ footer {
                }
                   .PH_office_dagupan h4 {
                      width: 100%;
+                     font-size: 15px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -986,6 +1132,7 @@ footer {
                      }
                   .PH_office_dagupan p {
                      width: 100%;
+                     font-size: 14px;
                      color: rgb(255, 255, 255, 0.7);
                      font-family: "Montserrat", sans-serif;
                   }
@@ -1181,6 +1328,7 @@ footer {
                   width: 50%;
                   height: 100%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1230,7 +1378,6 @@ footer {
                            color: fuchsia;
                            transition: 0.25s;
                         }
-                        
             .contact_us {
                width: 100%;
                height: 100px;
@@ -1245,6 +1392,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1310,6 +1458,7 @@ footer {
                   width: 100%;
                   height: 40%;
                   color: white;
+                  font-size: 18px;
                   box-sizing: border-box;
                   font-family: "Montserrat", sans-serif;
 
@@ -1378,8 +1527,7 @@ footer {
             color: rgb(255, 255, 255);
             font-family: "Montserrat", sans-serif;
          }
-
-         /*       RESPONSIVE FOOTER DESIGN START          */
+/*       RESPONSIVE FOOTER DESIGN START          */
 @media only screen and (max-width: 600px) {
    footer {
       clear: both;
@@ -1574,7 +1722,7 @@ footer {
                         }
                .PH_Office {
                   width: 100%;
-                  height: 45%;
+                  height: 55%;
                   padding: 10px;
                   box-sizing: border-box;
                   
