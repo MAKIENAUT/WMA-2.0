@@ -117,10 +117,6 @@ body {
       display: none;
    }
 @media screen and (max-width: 600px) {
-   .navbar {
-      
-      box-sizing: border-box;
-   }
    .logo_holder {
       left: 0;
       width: 60%;
