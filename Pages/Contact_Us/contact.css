@@ -154,26 +154,104 @@ body {
       right: 0;
       top: 60px;
       width: 75%;
-      height: 525px;
+      height: 560px;
       display: flex;
       transition: all 1s;
       flex-direction: column;
       background-color: white;
       border-top: 1px solid gold;
-   }
-   .navbar.responsive .nav_links {
-      width: 80%;
-      height: 50px;
-      border: 1px solid red;
+
       display: flex;
+      flex-direction: column;
+      justify-content: start;
    }
-   .navbar.responsive .nav_links .dropdown-content {
-      display: flex;
-   }
+      .navbar.responsive #navlink_news {
+         width: 100%;
+         height: 50px;
+         box-sizing: border-box;
+         border-bottom: 2px solid teal;
+      }
+      .navbar.responsive #navlink_process {
+         width: 100%;
+         height: 200px;
+         box-sizing: border-box;
+
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: start;
+      }
+      .navbar.responsive #navlink_categories {
+         width: 100%;
+         height: 250px;
+         box-sizing: border-box;
+
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: start;
+      }
+      .navbar.responsive #navlink_about {
+         width: 100%;
+         height: 50px;
+         box-sizing: border-box;
+         border-bottom: 2px solid teal;
+      }
+         .navbar.responsive #navlink_news a {
+            color: goldenrod;
+         }
+         .navbar.responsive #navlink_process a {
+            height: 50px;
+            color: goldenrod;
+            box-sizing: border-box;
+         }
+            .navbar.responsive #navlink_process .dropbtn {
+               border-bottom: 2px solid teal;
+            }
+         .navbar.responsive #navlink_categories a {
+            height: 50px;
+            color: goldenrod;
+            box-sizing: border-box;
+         }
+            .navbar.responsive #navlink_categories .dropbtn {
+               border-bottom: 2px solid teal;
+            }
+         .navbar.responsive #navlink_about a {
+            color: goldenrod;
+         }
+
+         .navbar.responsive #navlink_process .dropdown-content {
+            top: 50px;
+            width: 100%;
+            height: 150px;
+            position: none;
+            background-color: #dedede;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         }
+         .navbar.responsive #navlink_categories .dropdown-content {
+            top: 0px;
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background-color: #dedede;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         }
+            .navbar.responsive #navlink_process .dropdown-content a,
+            .navbar.responsive #navlink_categories .dropdown-content a{
+               color: black;
+            }
 }
-/* ! NAVIGATION BAR [ END ] ! */
-
-
+/* ! NAVIGATION BAR [ END ] ! */ 
 
 /* ! MAIN SECTION [ START ] ! */
 

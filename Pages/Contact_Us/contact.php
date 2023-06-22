@@ -52,20 +52,20 @@ $conn->close();
 </head>
 
 <body>
-	<nav class="navbar" id="myNavBar">
+<nav class="navbar" id="myNavBar">
 		<div class="logo_holder">
 			<a class="nav_logo" href="../../../index.php">
-				<img src="../../../Photos/wma-logo.png" />
+				<img src="../../../Photos/wma-logo.png" /> 
 			</a>
 		</div>
 
 		<div class="link_holder" id="link_holder">
-			<div class="nav_links">
+			<div class="nav_links" id="navlink_news">
 				<a href="#">News</a>
 			</div>
 
-			<div class="nav_links dropdown">
-				<a class="dropbtn">Process</a>
+			<div class="nav_links dropdown" id="navlink_process">
+				<a class="dropbtn">Process ▽</a>
 				<div class="dropdown-content">
 					<a href="../../../Pages/Process/Family_Based/process_FamBased.html">Family Based</a>
 					<a href="../../../Pages/Process/Study_Exchange/process_StudEx.html">Study and Exchange</a>
@@ -73,8 +73,9 @@ $conn->close();
 				</div>
 			</div>
 
-			<div class="nav_links dropdown">
-				<a class="dropbtn">Categories</a>
+			
+			<div class="nav_links dropdown" id="navlink_categories">
+				<a class="dropbtn">Categories ▽</a>
 				<div class="dropdown-content">
 					<a href="../../../Pages/Forms/Categories/Family_Based/FB_Eligibility.php">Family Based</a>
 					<a href="../../../Pages/Forms/Categories/Study_Exchange/SE_Eligibility.php">Study and Exchange (J1)</a>
@@ -84,7 +85,7 @@ $conn->close();
 				</div>
 			</div>
 
-			<div class="nav_links">
+			<div class="nav_links" id="navlink_about">
 				<a href="../../../Pages/About_Us/about.html">About Us</a>
 			</div>
 		</div>
