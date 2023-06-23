@@ -32,6 +32,7 @@ body {
       align-items: center;
       justify-content: space-between;
    }
+   
       .nav_logo {
          width: 100%;
          opacity: 0.8;
@@ -262,6 +263,128 @@ body {
       align-items: center;
       justify-content: center;
    }
+   
+.bottomWidget {
+   height: max-content;
+   width: max-content;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   position: fixed;
+   bottom: 23px;
+   right: 28px;
+}
+
+.widgetLeft {
+   background-color: #ffffff;
+   border-radius: 10px;
+   padding: 10px;
+   height: fit-content;
+   cursor: default;
+}
+
+   /* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+   height: 75px;
+   width: 75px;
+   background-color: #ffffff;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ 
+ /* The popup form - hidden by default */
+ .form-popup {
+   position: fixed;
+   bottom: 110px;
+   right: 28px;
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 0.3s, transform 0.3s;
+ }
+
+ .form-popup.open {
+   opacity: 1;
+   transform: translateY(0);
+ }
+ 
+ /* Add styles to the form container */
+ .form-container {
+   width: 350px;
+   height: max-content;
+   padding: 20px;
+   background-color: white;
+   display: flex;
+   flex-flow: column nowrap;
+   border-radius: 10px;
+ }
+
+ .form-container h1 {
+   margin-bottom: 25px;
+ }
+
+ .popupButtons {
+   display: flex;
+   gap: 10px;
+ }
+
+ /* Set a style for the submit/login button */
+ .form-container .btn {
+   background-color: #04AA6D;
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   ;
+ }
+ 
+ /* Add some hover effects to buttons */
+ .mfp-move-horizontal {
+  
+   /* start state */
+   .mfp-with-anim {
+     opacity: 0;
+     transition: all 0.3s;
+     
+     transform: translateX(-50px);
+   }
+   
+   &.mfp-bg {
+     opacity: 0;
+      transition: all 0.3s;
+   }
+   
+   /* animate in */
+   &.mfp-ready {
+     .mfp-with-anim {
+       opacity: 1;
+       transform: translateX(0);
+     }
+     &.mfp-bg {
+       opacity: 0.8;
+     }
+   }
+   
+   /* animate out */
+   &.mfp-removing {
+     
+     .mfp-with-anim {
+       transform: translateX(50px);
+       opacity: 0;
+     }
+     &.mfp-bg {
+       opacity: 0;
+     }
+     
+   }
+   
+ }
+ .form-container .btn:hover {
+   transition: 0.3s;
+   background-color: #00774c;
+
+ }
    .section-img {
       background-size: cover;
       /* background-position-x: 200px;
