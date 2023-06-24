@@ -265,39 +265,38 @@ body {
    }
    
 .bottomWidget {
+   font-family: "Montserrat", sans-serif;
    height: max-content;
    width: max-content;
    display: flex;
    align-items: center;
-   gap: 10px;
    position: fixed;
    bottom: 23px;
    right: 28px;
 }
-
-.widgetLeft {
-   background-color: #ffffff;
-   border-radius: 10px;
-   padding: 10px;
-   height: fit-content;
-   cursor: default;
-}
-
    /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-   height: 75px;
-   width: 75px;
+   padding: 20px;
    background-color: #ffffff;
    border: none;
-   border-radius: 50%;
+   border-radius: 10px;
    cursor: pointer;
    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   text-align: center;
+   font-weight: 700;
+   transition: 0.3s;
+ }
+
+ .open-button:hover {
+   transition: 0.3s;
+   background-color: #eaeaea;
  }
  
  /* The popup form - hidden by default */
  .form-popup {
+   display: none;
    position: fixed;
-   bottom: 110px;
+   bottom: 90px;
    right: 28px;
    opacity: 0;
    transform: translateY(50px);
@@ -307,6 +306,7 @@ body {
  .form-popup.open {
    opacity: 1;
    transform: translateY(0);
+   transition: opacity 0.3s, transform 0.3s;
  }
  
  /* Add styles to the form container */
@@ -318,6 +318,7 @@ body {
    display: flex;
    flex-flow: column nowrap;
    border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  }
 
  .form-container h1 {
@@ -331,59 +332,22 @@ body {
 
  /* Set a style for the submit/login button */
  .form-container .btn {
-   background-color: #04AA6D;
-   color: white;
-   padding: 16px 20px;
-   border: none;
+   color: black;
+   border-radius: 8px;
+   border: 1px solid teal;
+   outline-offset: 3px;
+   outline: 1px solid #daa520;
+   background-color: goldenrod;
+   transition: 0.125s;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 700;
+   padding: 10px;
    cursor: pointer;
-   ;
- }
- 
- /* Add some hover effects to buttons */
- .mfp-move-horizontal {
-  
-   /* start state */
-   .mfp-with-anim {
-     opacity: 0;
-     transition: all 0.3s;
-     
-     transform: translateX(-50px);
-   }
-   
-   &.mfp-bg {
-     opacity: 0;
-      transition: all 0.3s;
-   }
-   
-   /* animate in */
-   &.mfp-ready {
-     .mfp-with-anim {
-       opacity: 1;
-       transform: translateX(0);
-     }
-     &.mfp-bg {
-       opacity: 0.8;
-     }
-   }
-   
-   /* animate out */
-   &.mfp-removing {
-     
-     .mfp-with-anim {
-       transform: translateX(50px);
-       opacity: 0;
-     }
-     &.mfp-bg {
-       opacity: 0;
-     }
-     
-   }
-   
  }
  .form-container .btn:hover {
    transition: 0.3s;
-   background-color: #00774c;
-
+   background-color: rgb(190, 141, 18);
  }
    .section-img {
       background-size: cover;

@@ -24,12 +24,12 @@ function copyToClipboard() {
 
 function toggleForm() {
 	var formPopup = document.getElementById("myForm");
-	formPopup.classList.toggle("open");
+	var isOpen = formPopup.classList.toggle("open");
 
 	setTimeout(
 		function () {
 			formPopup.style.display = isOpen ? "block" : "none";
 		},
-		isOpen ? 10 : 300
+		isOpen ? 300 : 300
 	);
 }
