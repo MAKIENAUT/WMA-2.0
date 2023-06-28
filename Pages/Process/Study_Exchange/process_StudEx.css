@@ -253,6 +253,93 @@ body {
 }
 
 /* SECTION DESIGN START */
+   /* WIDGET START */
+   .bottomWidget {
+      font-family: "Montserrat", sans-serif;
+      height: max-content;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+   }
+      /* Button used to open the contact form - fixed at the bottom of the page */
+   .open-button {
+      padding: 20px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      text-align: center;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+   
+    .open-button:hover {
+      transition: 0.3s;
+      background-color: #eaeaea;
+    }
+    
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 28px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+   
+    .form-popup.open {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      width: 350px;
+      height: max-content;
+      padding: 20px;
+      background-color: white;
+      display: flex;
+      flex-flow: column nowrap;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+   
+    .form-container h1 {
+      margin-bottom: 25px;
+    }
+   
+    .popupButtons {
+      display: flex;
+      gap: 10px;
+    }
+   
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      color: black;
+      border-radius: 8px;
+      border: 1px solid teal;
+      outline-offset: 3px;
+      outline: 1px solid #daa520;
+      background-color: goldenrod;
+      transition: 0.125s;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .form-container .btn:hover {
+      transition: 0.3s;
+      background-color: rgb(190, 141, 18);
+    }
+    /* WIDGET END */
 section {
   height: fit-content;
   margin-top: 60px;
@@ -395,7 +482,7 @@ section {
 
 .steps_image {
   width: 40%;
-  background-size: cover;
+  background-size: 125%;
   background-position-x: -100px;
   background-repeat: no-repeat;
   background-image: url("../../../Photos/studEx2.jpg");
