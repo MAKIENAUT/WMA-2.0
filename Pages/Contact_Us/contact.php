@@ -2,8 +2,6 @@
 
 include '../../Administrator/Database/config.php';
 // Check if form was submitted
-
-session_destroy();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    // Get input values
@@ -52,7 +50,7 @@ $conn->close();
 </head>
 
 <body>
-<nav class="navbar" id="myNavBar">
+	<nav class="navbar" id="myNavBar">
 		<div class="logo_holder">
 			<a class="nav_logo" href="../../../index.php">
 				<img src="../../../Photos/wma-logo.png" /> 
@@ -104,7 +102,7 @@ $conn->close();
 
 		<div class="main_section">
 			<div class="query_container">
-
+				
 			</div>
 
 			<div class="maps_container">
