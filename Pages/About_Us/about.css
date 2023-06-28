@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 * {
    padding: 0;
    margin: 0;
@@ -253,7 +252,297 @@ body {
             }
 }
 /* ! NAVIGATION BAR [ END ] ! */ 
-   /* WIDGET START */
+
+main {
+   width: 100%;
+   margin-top: 60px;
+   height: fit-content;
+   box-sizing: border-box;
+
+   display: flex;
+   align-content: center;
+   flex-direction: column;
+   justify-content: start;
+}
+   .about_header {
+      width: 100%;
+      height: 300px;
+      box-sizing: border-box;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position-x: center;
+      background-position-y: -150px;
+      background-image: url(../../Photos/HOMEPAGE.jpeg);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+      .header_title {
+         width: 100%;
+         height: 100%;
+         font-size: 60px;
+         font-weight: bold;
+         box-sizing: border-box;
+         color: rgb(255, 255, 255);
+         padding: 100px 50px 100px 100px;
+         background-color: rgba(0, 0, 0, 0.2);
+         font-family: Georgia, 'Times New Roman', Times, serif;
+
+         display: flex;
+         align-items: center;
+         justify-content: start;
+      }
+   .about_narrative {
+      width: 100%;
+      height: 400px;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+      .left_content {
+         width: 50%;
+         padding: 20px;
+         box-sizing: border-box;
+      }
+         .company_logo {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: start;
+         }
+            .company_logo img {
+               width: 90%;
+            }
+            .company_logo p {
+               width: 90%;
+               font-size: 16px;
+               font-weight: 600;
+               letter-spacing: 0.5px;
+               color: rgb(48, 93, 98, 0.8);
+               font-family: "Montserrat", sans-serif;
+            }
+      .right_content {
+         width: 50%;
+         padding: 20px;
+         box-sizing: border-box;
+         display: flex;
+         flex-flow: column nowrap;
+         gap: 10px;
+      }
+         .right_content p {
+            font-size: 14px;
+            font-weight: 500;
+            text-indent: 10%;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            font-family: "Montserrat", sans-serif;
+         } 
+            .right_content p b {
+               color: goldenrod;
+            }
+            .right_content p a {
+               color: goldenrod;
+               transition: all 0.3s;
+               text-decoration: none;
+            }  
+               .right_content p a:hover {
+                  transition: all 0.3s;
+                  color: rgb(19, 73, 79);
+               }         
+   .about_categories {
+      width: 100%;
+      height: max-content;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+   }
+      .family_based,
+      .exchange_student,
+      .temporary_employment {
+         width: 100%;
+         height: 350px;
+      }
+         .learn_more {
+            width: 55%;
+            height: 15%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+            .learn_more a {
+               width: 30%;
+               height: 100%;
+               font-size: 20px;
+               color: white;
+               border-radius: 5px;
+               font-weight: 600;
+               text-decoration: none;
+               transition: all 0.3s;
+               font-family: "Montserrat", sans-serif;
+               background-color: rgb(218, 165, 32, 0.75);
+               
+               gap: 30px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+               .learn_more a i {
+                  font-size: 25px;
+               }
+               .learn_more a:hover {
+                  transition: all 0.3s;
+                  background-color: rgb(19, 73, 79, 0.75);
+               }
+      .family_based {
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position-x: 150px;
+         background-position-y: -150px;
+         background-color: rgb(244, 244, 244);
+         background-image: url(../../Photos/famBased.jpg);
+
+         display: flex;
+         align-items: flex-start;
+         flex-direction: column;
+         justify-content: center;
+      }
+         .family_based p {
+            width: 55%;
+            height: 50%;
+            padding: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            text-indent: 10%;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            box-sizing: border-box;
+            color: rgb(19, 73, 79);
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         
+      .temporary_employment {
+         display: flex;
+         align-items: flex-end;
+         flex-direction: column;
+         justify-content: center;
+
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position-y: center;
+         background-position-x: -50px;
+         background-image: url(../../Photos/employee.jpg);
+         background-color: rgb(194, 192, 193);
+      }
+         .temporary_employment p {
+            width: 55%;
+            height: 50%;
+            padding: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            text-indent: 10%;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            box-sizing: border-box;
+            color: rgb(0, 45, 49);
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+      .exchange_student {
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position-y: center;
+         background-position-x: right;
+         background-image: url(../../Photos/student.jpg);
+         background-color: rgb(239, 235, 234);
+
+         display: flex;
+         align-items: flex-start;
+         flex-direction: column;
+         justify-content: center;
+      }
+         .exchange_student p {
+            width: 55%;
+            height: 60%;
+            padding: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            text-indent: 10%;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            box-sizing: border-box;
+            color: rgb(19, 73, 79);
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+   .about_extension {
+      width: 100%;
+      height: 150px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: black;
+   }
+      .extension_proper {
+         width: 80%;
+         height: 60%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+         .extension_body {
+            width: 100%;
+            height: 70%;
+            color: white;
+            border-radius: 10px;
+            font-family: "Montserrat", sans-serif;
+            background-color: rgb(218, 165, 32);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+         }
+            .extension_body a {
+               width: 20%;
+               height: 65%;
+               color: white;
+               font-size: 20px;
+               font-weight: 600;
+               border-radius: 10px;
+               transition: all 0.3s;
+               text-decoration: none;
+               background-color: teal;
+
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+               .extension_body a:hover {
+                  color: teal;
+                  transition: all 0.3s;
+                  background-color: white;
+               }
    .bottomWidget {
       font-family: "Montserrat", sans-serif;
       height: max-content;
@@ -264,371 +553,71 @@ body {
       bottom: 23px;
       right: 28px;
    }
-      /* Button used to open the contact form - fixed at the bottom of the page */
-   .open-button {
-      padding: 20px;
-      background-color: #ffffff;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      text-align: center;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-   
-    .open-button:hover {
-      transition: 0.3s;
-      background-color: #eaeaea;
-    }
-    
-    /* The popup form - hidden by default */
-    .form-popup {
-      display: none;
-      position: fixed;
-      bottom: 90px;
-      right: 28px;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.3s, transform 0.3s;
-    }
-   
-    .form-popup.open {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.3s, transform 0.3s;
-    }
-    
-    /* Add styles to the form container */
-    .form-container {
-      width: 350px;
-      height: max-content;
-      padding: 20px;
-      background-color: white;
-      display: flex;
-      flex-flow: column nowrap;
-      border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-   
-    .form-container h1 {
-      margin-bottom: 25px;
-    }
-   
-    .popupButtons {
-      display: flex;
-      gap: 10px;
-    }
-   
-    /* Set a style for the submit/login button */
-    .form-container .btn {
-      color: black;
-      border-radius: 8px;
-      border: 1px solid teal;
-      outline-offset: 3px;
-      outline: 1px solid #daa520;
-      background-color: goldenrod;
-      transition: 0.125s;
-      text-align: center;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 10px;
-      cursor: pointer;
-    }
-    .form-container .btn:hover {
-      transition: 0.3s;
-      background-color: rgb(190, 141, 18);
-    }
-    /* WIDGET END */
-   main {
-      width: 100%;
-      margin-top: 60px;
-      height: fit-content;
-      box-sizing: border-box;
-
-      display: flex;
-      align-content: center;
-      flex-direction: column;
-      justify-content: start;
-   }
-      .about_header {
-         width: 100%;
-         height: 300px;
-         box-sizing: border-box;
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-attachment: fixed;
-         background-position-x: center;
-         background-position-y: -150px;
-         background-image: url(../../Photos/HOMEPAGE.jpeg);
-
-         display: flex;
-         align-items: center;
-         justify-content: center;
+      .open-button {
+         padding: 20px;
+         background-color: #ffffff;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         text-align: center;
+         font-weight: 700;
+         transition: 0.3s;
       }
-         .header_title {
-            width: 100%;
-            height: 100%;
-            font-size: 60px;
-            font-weight: bold;
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            padding: 100px 50px 100px 100px;
-            background-color: rgba(0, 0, 0, 0.2);
-            font-family: Georgia, 'Times New Roman', Times, serif;
-
-            display: flex;
-            align-items: center;
-            justify-content: start;
+         .open-button:hover {
+            transition: 0.3s;
+            background-color: #eaeaea;
          }
-      .about_narrative {
-         width: 100%;
-         height: 400px;
-         box-sizing: border-box;
-
-         display: flex;
-         align-items: center;
-         justify-content: center;
+      .form-popup {
+         display: none;
+         position: fixed;
+         bottom: 90px;
+         right: 28px;
+         opacity: 0;
+         transform: translateY(50px);
+         transition: opacity 0.3s, transform 0.3s;
       }
-         .left_content {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
+         .form-popup.open {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s, transform 0.3s;
          }
-            .company_logo {
-               width: 100%;
-               height: 100%;
-
-               display: flex;
-               align-items: center;
-               flex-direction: column;
-               justify-content: start;
-            }
-               .company_logo img {
-                  width: 90%;
-               }
-               .company_logo p {
-                  width: 90%;
-                  font-size: 16px;
-                  font-weight: 600;
-                  letter-spacing: 0.5px;
-                  color: rgb(48, 93, 98, 0.8);
-                  font-family: "Montserrat", sans-serif;
-               }
-         .right_content {
-            width: 50%;
+         .form-container {
+            width: 350px;
+            height: max-content;
             padding: 20px;
-            box-sizing: border-box;
+            background-color: white;
             display: flex;
             flex-flow: column nowrap;
-            gap: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          }
-            .right_content p {
-               font-size: 14px;
-               font-weight: 500;
-               text-indent: 10%;
-               line-height: 25px;
-               letter-spacing: 0.5px;
-               font-family: "Montserrat", sans-serif;
-            } 
-               .right_content p b {
-                  color: goldenrod;
-               }
-               .right_content p a {
-                  color: goldenrod;
-                  transition: all 0.3s;
+            .form-container h1 {
+               margin-bottom: 25px;
+               font-size: 25px;
+            }
+            .popupButtons {
+               display: flex;
+               gap: 10px;
+            }
+               .form-container .btn {
+                  color: black;
+                  border-radius: 8px;
+                  border: 1px solid teal;
+                  outline-offset: 3px;
+                  outline: 1px solid #daa520;
+                  background-color: goldenrod;
+                  transition: 0.125s;
+                  text-align: center;
+                  font-size: 16px;
+                  font-weight: 700;
+                  padding: 10px;
+                  cursor: pointer;
                   text-decoration: none;
-               }  
-                  .right_content p a:hover {
-                     transition: all 0.3s;
-                     color: rgb(19, 73, 79);
-                  }         
-      .about_categories {
-         width: 100%;
-         height: max-content;
-         box-sizing: border-box;
-
-         display: flex;
-         align-items: center;
-         flex-direction: column;
-         justify-content: space-evenly;
-      }
-         .family_based,
-         .exchange_student,
-         .temporary_employment {
-            width: 100%;
-            height: 350px;
-         }
-            .learn_more {
-               width: 55%;
-               height: 15%;
-               
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-               .learn_more a {
-                  width: 30%;
-                  height: 100%;
-                  font-size: 20px;
-                  color: white;
-                  border-radius: 5px;
-                  font-weight: 600;
-                  text-decoration: none;
-                  transition: all 0.3s;
-                  font-family: "Montserrat", sans-serif;
-                  background-color: rgb(218, 165, 32, 0.75);
-                  
-                  gap: 30px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
                }
-                  .learn_more a i {
-                     font-size: 25px;
-                  }
-                  .learn_more a:hover {
-                     transition: all 0.3s;
-                     background-color: rgb(19, 73, 79, 0.75);
-                  }
-         .family_based {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position-x: 150px;
-            background-position-y: -150px;
-            background-color: rgb(244, 244, 244);
-            background-image: url(../../Photos/famBased.jpg);
-
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: center;
-         }
-            .family_based p {
-               width: 55%;
-               height: 50%;
-               padding: 30px;
-               font-size: 15px;
-               font-weight: 500;
-               text-indent: 10%;
-               line-height: 25px;
-               letter-spacing: 0.5px;
-               box-sizing: border-box;
-               color: rgb(19, 73, 79);
-               font-family: "Montserrat", sans-serif;
-
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-            
-         .temporary_employment {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            justify-content: center;
-
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position-y: center;
-            background-position-x: -50px;
-            background-image: url(../../Photos/employee.jpg);
-            background-color: rgb(194, 192, 193);
-         }
-            .temporary_employment p {
-               width: 55%;
-               height: 50%;
-               padding: 30px;
-               font-size: 15px;
-               font-weight: 500;
-               text-indent: 10%;
-               line-height: 25px;
-               letter-spacing: 0.5px;
-               box-sizing: border-box;
-               color: rgb(0, 45, 49);
-               font-family: "Montserrat", sans-serif;
-
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-         .exchange_student {
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position-y: center;
-            background-position-x: right;
-            background-image: url(../../Photos/student.jpg);
-            background-color: rgb(239, 235, 234);
-
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: center;
-         }
-            .exchange_student p {
-               width: 55%;
-               height: 60%;
-               padding: 30px;
-               font-size: 15px;
-               font-weight: 500;
-               text-indent: 10%;
-               line-height: 25px;
-               letter-spacing: 0.5px;
-               box-sizing: border-box;
-               color: rgb(19, 73, 79);
-               font-family: "Montserrat", sans-serif;
-
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-      .about_extension {
-         width: 100%;
-         height: 150px;
-
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         border-top: black;
-      }
-         .extension_proper {
-            width: 80%;
-            height: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-         }
-            .extension_body {
-               width: 100%;
-               height: 70%;
-               color: white;
-               border-radius: 10px;
-               font-family: "Montserrat", sans-serif;
-               background-color: rgb(218, 165, 32);
-
-               display: flex;
-               align-items: center;
-               justify-content: space-around;
-            }
-               .extension_body a {
-                  width: 20%;
-                  height: 65%;
-                  color: white;
-                  font-size: 20px;
-                  font-weight: 600;
-                  border-radius: 10px;
-                  transition: all 0.3s;
-                  text-decoration: none;
-                  background-color: teal;
-
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-               }
-                  .extension_body a:hover {
-                     color: teal;
-                     transition: all 0.3s;
-                     background-color: white;
+                  .form-container .btn:hover {
+                     transition: 0.3s;
+                     background-color: rgb(190, 141, 18);
                   }
 
 @media only screen and (max-width: 600px) {

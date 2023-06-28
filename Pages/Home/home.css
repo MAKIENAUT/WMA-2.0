@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 * {
    padding: 0;
    margin: 0;
@@ -32,7 +32,6 @@ body {
       align-items: center;
       justify-content: space-between;
    }
-   
       .nav_logo {
          width: 100%;
          opacity: 0.8;
@@ -263,93 +262,7 @@ body {
       align-items: center;
       justify-content: center;
    }
-   /* WIDGET START */
-.bottomWidget {
-   font-family: "Montserrat", sans-serif;
-   height: max-content;
-   width: max-content;
-   display: flex;
-   align-items: center;
-   position: fixed;
-   bottom: 23px;
-   right: 28px;
-}
-   /* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-   padding: 20px;
-   background-color: #ffffff;
-   border: none;
-   border-radius: 10px;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   text-align: center;
-   font-weight: 700;
-   transition: 0.3s;
- }
 
- .open-button:hover {
-   transition: 0.3s;
-   background-color: #eaeaea;
- }
- 
- /* The popup form - hidden by default */
- .form-popup {
-   display: none;
-   position: fixed;
-   bottom: 90px;
-   right: 28px;
-   opacity: 0;
-   transform: translateY(50px);
-   transition: opacity 0.3s, transform 0.3s;
- }
-
- .form-popup.open {
-   opacity: 1;
-   transform: translateY(0);
-   transition: opacity 0.3s, transform 0.3s;
- }
- 
- /* Add styles to the form container */
- .form-container {
-   width: 350px;
-   height: max-content;
-   padding: 20px;
-   background-color: white;
-   display: flex;
-   flex-flow: column nowrap;
-   border-radius: 10px;
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
- }
-
- .form-container h1 {
-   margin-bottom: 25px;
- }
-
- .popupButtons {
-   display: flex;
-   gap: 10px;
- }
-
- /* Set a style for the submit/login button */
- .form-container .btn {
-   color: black;
-   border-radius: 8px;
-   border: 1px solid teal;
-   outline-offset: 3px;
-   outline: 1px solid #daa520;
-   background-color: goldenrod;
-   transition: 0.125s;
-   text-align: center;
-   font-size: 16px;
-   font-weight: 700;
-   padding: 10px;
-   cursor: pointer;
- }
- .form-container .btn:hover {
-   transition: 0.3s;
-   background-color: rgb(190, 141, 18);
- }
- /* WIDGET END */
    .section-img {
       background-size: cover;
       /* background-position-x: 200px;
@@ -399,42 +312,11 @@ body {
             align-items: center;
             flex-direction: column;
          }
-            .text_title h1 {
-               font-size: 60px;
-               font-weight: 800;
-               font-family: Georgia, "Times New Roman", Times, serif;
-            }
             .text_title h3 {
                font-size: 20px;
                font-weight: 500;
                font-family: "Montserrat", sans-serif;
             }
-            .text_title a {
-               height: 50px;
-               width: 150px;
-               margin-top: 30px;
-               color: black;
-               border-radius: 8px;
-               border: 1px solid teal;
-               outline-offset: 3px;
-               outline: 1px solid goldenrod;
-               background-color: goldenrod;
-               transition: 0.125s;
-               text-align: center;
-               font-size: 16px;
-               font-weight: 700;
-               text-decoration: none;
-               font-family: "Montserrat", sans-serif;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
-               .text_title a:hover {
-                  background-color: rgb(209, 157, 26);
-                  /* border-bottom: 1px solid white; */
-                  /* color: rgb(255, 213, 4); */
-                  transition: 0.125s;
-               }
    .narrative_section {
       padding: 50px;
       height: max-content;
@@ -443,62 +325,60 @@ body {
       background-color: goldenrod;
       grid-template-columns: 1fr 1fr 1fr;
    }
-   .studyAndExchange_narrative {
-      display: flex;
-      padding: 20px;
-      flex-flow: column wrap;
-      align-items: flex-start;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      .studyAndExchange_narrative {
+         display: flex;
+         padding: 20px;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         background-color: white;
+         border-radius: 15px;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-      position: relative;
-   }
-   .studEx_image {
-      height: 200px;
-      width: 100%;
-      margin-bottom: 20px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../../Photos/studEx.jpg)
-   }
+         position: relative;
+      }
+         .studEx_image {
+            height: 200px;
+            width: 100%;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../../Photos/studEx.jpg)
+         }
 
-   .family_narrative {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start;
-      padding: 20px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
-   .famNar_image {
-      height: 200px;
-      width: 100%;
-      margin-bottom: 20px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../../Photos/famBased.jpg)
-    }
-
-   .tempEmployment_narrative {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start;
-      padding: 20px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
-   .tempEmp_image {
-      height: 200px;
-      width: 100%;
-      margin-bottom: 20px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(../../Photos/h2a.jpg)
-    }
-
+      .family_narrative {
+         display: flex;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         padding: 20px;
+         background-color: white;
+         border-radius: 15px;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+         .famNar_image {
+            height: 200px;
+            width: 100%;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../../Photos/famBased.jpg)
+         }
+      .tempEmployment_narrative {
+         display: flex;
+         flex-flow: column wrap;
+         align-items: flex-start;
+         padding: 20px;
+         background-color: white;
+         border-radius: 15px;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+         .tempEmp_image {
+            height: 200px;
+            width: 100%;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../../Photos/h2a.jpg)
+         }
    .narrative_section p {
       font-family: "Montserrat", sans-serif;
       font-size: 15px;
@@ -530,7 +410,6 @@ body {
             /* color: rgb(255, 213, 4); */
             transition: 0.125s;
          }
-
    .about_section {
       padding: 50px;
       height: max-content;
@@ -539,6 +418,83 @@ body {
       justify-content: center;
       font-family: "Montserrat", sans-serif;
    }
+
+   .bottomWidget {
+      font-family: "Montserrat", sans-serif;
+      height: max-content;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+   }
+      .open-button {
+         padding: 20px;
+         background-color: #ffffff;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         text-align: center;
+         font-weight: 700;
+         transition: 0.3s;
+      }
+         .open-button:hover {
+            transition: 0.3s;
+            background-color: #eaeaea;
+         }
+      .form-popup {
+         display: none;
+         position: fixed;
+         bottom: 90px;
+         right: 28px;
+         opacity: 0;
+         transform: translateY(50px);
+         transition: opacity 0.3s, transform 0.3s;
+      }
+         .form-popup.open {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s, transform 0.3s;
+         }
+         .form-container {
+            width: 350px;
+            height: max-content;
+            padding: 20px;
+            background-color: white;
+            display: flex;
+            flex-flow: column nowrap;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         }
+            .form-container h1 {
+               margin-bottom: 25px;
+               font-size: 25px;
+            }
+            .popupButtons {
+               display: flex;
+               gap: 10px;
+            }
+               .form-container .btn {
+                  color: black;
+                  border-radius: 8px;
+                  border: 1px solid teal;
+                  outline-offset: 3px;
+                  outline: 1px solid #daa520;
+                  background-color: goldenrod;
+                  transition: 0.125s;
+                  text-align: center;
+                  font-size: 16px;
+                  font-weight: 700;
+                  padding: 10px;
+                  cursor: pointer;
+                  text-decoration: none;
+               }
+                  .form-container .btn:hover {
+                     transition: 0.3s;
+                     background-color: rgb(190, 141, 18);
+                  }
 /* RESPONSIVE INTRO SECTION */
 @media only screen and (max-width: 600px) {
    section {
