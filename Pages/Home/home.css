@@ -263,7 +263,7 @@ body {
       align-items: center;
       justify-content: center;
    }
-   
+   /* WIDGET START */
 .bottomWidget {
    font-family: "Montserrat", sans-serif;
    height: max-content;
@@ -349,6 +349,7 @@ body {
    transition: 0.3s;
    background-color: rgb(190, 141, 18);
  }
+ /* WIDGET END */
    .section-img {
       background-size: cover;
       /* background-position-x: 200px;
