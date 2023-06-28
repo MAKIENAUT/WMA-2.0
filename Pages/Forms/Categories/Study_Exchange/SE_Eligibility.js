@@ -10,83 +10,49 @@ function myFunction() {
     }
 }
 
-// COMMANDS TO VALIDATE PROFESSION SELECTION
-function validate() { 
-    var inputArray = [];
-    inputArray[0] = document.forms["myForm"]["lastname"];
-    inputArray[1] = document.forms["myForm"]["firstname"];
-    inputArray[2] = document.forms["myForm"]["address"];
-    inputArray[3] = document.forms["myForm"]["country"];
-    inputArray[4] = document.forms["myForm"]["phone_number"];
-    inputArray[5] = document.forms["myForm"]["email"];
-    inputArray[6] = document.forms["myForm"]["profession"];
+function validate() {
+    const inputFields = [
+        "lastname",
+        "firstname",
+        "address",
+        "country",
+        "phone_number",
+        "email",
+        "profession"
+    ];
 
-    if (inputArray[0].value == "") {
-        inputArray[0].style.border = "1px solid red";
-        inputArray[1].style.border = "1px solid red";
-    } else {
-        inputArray[0].style.border = "none";
+    let isFormValid = true;
+
+    for (let i = 0; i < inputFields.length; i++) {
+        const inputField = document.forms["myForm"][inputFields[i]];
+        const nextInputField = document.forms["myForm"][inputFields[i + 1]];
+
+        if (inputField.value === "") {
+            inputField.style.border = "1px solid red";
+
+            if (nextInputField) {
+                nextInputField.style.border = "1px solid red";
+            }
+
+            isFormValid = false;
+        } else {
+            inputField.style.border = "none";
+        }
     }
 
-    if (inputArray[1].value == "") {
-        inputArray[1].style.border = "1px solid red";
-        inputArray[2].style.border = "1px solid red";
-    } else {
-        inputArray[1].style.border = "none";
-    }
+    const yesButton = document.getElementById("yes");
+    const yesLabel = document.getElementById("yes_label");
 
-    if (inputArray[2].value == "") {
-        inputArray[2].style.border = "1px solid red";
-        inputArray[3].style.border = "1px solid red";
-    } else {
-        inputArray[2].style.border = "none";
-    }
-
-    if (inputArray[3].value == "") {
-        inputArray[3].style.border = "1px solid red";
-        inputArray[4].style.border = "1px solid red";
-    } else {
-        inputArray[3].style.border = "none";
-    }
-
-    if (inputArray[4].value == "") {
-        inputArray[4].style.border = "1px solid red";
-        inputArray[5].style.border = "1px solid red";
-    } else {
-        inputArray[4].style.border = "none";
-    }
-
-    if (inputArray[5].value == "") {
-        inputArray[5].style.border = "1px solid red";
-        inputArray[6].style.border = "1px solid red";
-    } else {
-        inputArray[5].style.border = "none";
-    }
-
-    if (inputArray[6].value == "") {
-        inputArray[6].style.border = "1px solid red";
-        inputArray[7].style.border = "1px solid red";
-    } else {
-        inputArray[6].style.border = "none";
-    }
-
-    if (inputArray[0].value != "" &&
-        inputArray[1].value != "" &&
-        inputArray[2].value != "" &&
-        inputArray[3].value != "" &&
-        inputArray[4].value != "" &&
-        inputArray[5].value != "" &&
-        inputArray[6].value != "" ) {
+    if (isFormValid) {
         window.personalInfo = true;
-        document.getElementById("yes").disabled = false;
-        document.getElementById("yes_label").innerHTML = "YES!";
+        yesButton.disabled = false;
+        yesLabel.innerHTML = "YES!";
     } else {
-        document.getElementById("yes").disabled = true;
-        document.getElementById("no").click();
-        document.getElementById("yes_label").innerHTML = "YES - If unclickable, please check form.";
         window.personalInfo = false;
+        yesButton.disabled = true;
+        document.getElementById("no").click();
+        yesLabel.innerHTML = "YES - If unclickable, please check form.";
     }
-
 }
 
 // COMMANDS TO VALIDATE PROFESSION SELECTION

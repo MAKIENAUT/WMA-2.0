@@ -60,9 +60,9 @@ $conn->close();
 		</div>
 
 		<div class="link_holder" id="link_holder">
-			<div class="nav_links" id="navlink_news">
-				<a href="#">News</a>
-			</div>
+				<div class="nav_links" id="navlink_news">
+					<a href="#">News</a>
+				</div>
 
 			<div class="nav_links dropdown" id="navlink_process">
 				<a class="dropbtn">Process ▽</a>
