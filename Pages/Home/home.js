@@ -28,8 +28,15 @@ function toggleForm() {
 
 	setTimeout(
 		function () {
-			formPopup.style.display = isOpen ? "block" : "none";
+			formPopup.style.display = isOpen;
 		},
 		isOpen ? 300 : 300
 	);
+}
+
+function toggleBranch() {
+	const branchPopup = document.getElementById("branch-popup");
+	const isOpen = branchPopup.classList.toggle("open");
+
+	branchPopup.style.display = isOpen;
 }
